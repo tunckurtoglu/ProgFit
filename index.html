@@ -273,14 +273,72 @@ footer p{font-size:11px;color:rgba(255,255,255,0.28);}
     <div class="sec-tag" data-i="aio_tag">Hepsi Bir Arada</div>
     <h2 class="sec-h" style="text-align:center;font-size:clamp(28px,4.5vw,52px);"><span data-i="aio_h">Ayrı ayrı değil,</span><br><span class="ac" data-i="aio_h_ac">tek uygulamada.</span></h2>
     <p class="sec-sub" data-i="aio_sub">Her özellik için ayrı uygulama aramak zorunda değilsin. ProgFit fitness ihtiyaçlarının tamamını bir arada sunuyor.</p>
-    <div class="del-strip">
-      <div class="del-app"><div class="del-icon" style="background:rgba(96,165,250,0.1);">📊<div class="del-x">✕</div></div><div class="del-name" data-i="del1">Antrenman Takip</div></div>
-      <div class="del-app"><div class="del-icon" style="background:rgba(245,158,11,0.1);">🥗<div class="del-x">✕</div></div><div class="del-name" data-i="del2">Kalori Sayacı</div></div>
-      <div class="del-app"><div class="del-icon" style="background:rgba(163,230,53,0.08);">⚖️<div class="del-x">✕</div></div><div class="del-name" data-i="del3">Yağ Oranı</div></div>
-      <div class="del-app"><div class="del-icon" style="background:rgba(248,113,113,0.1);">📈<div class="del-x">✕</div></div><div class="del-name" data-i="del4">İlerleme Grafiği</div></div>
-      <div class="del-app"><div class="del-icon" style="background:rgba(167,139,250,0.1);">👨‍💼<div class="del-x">✕</div></div><div class="del-name" data-i="del5">Online Koç</div></div>
-      <div class="del-arrow">→</div>
-      <div class="progfit-icon"><div class="progfit-icon-box"><b>Prog</b><i>Fit</i></div><div class="progfit-name">ProgFit</div></div>
+    <!-- HUB SVG -->
+    <div id="hub-wrap" style="max-width:420px;margin:0 auto 32px;position:relative;">
+      <svg id="hub-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+        <defs>
+          <style>
+            .hub-lbl{font-family:-apple-system,sans-serif;font-size:11px;font-weight:700;fill:#fff;text-anchor:middle;}
+            .hub-emoji{font-size:22px;text-anchor:middle;dominant-baseline:central;}
+          </style>
+        </defs>
+        <!-- Spokes — animasyonlu -->
+        <line id="sp1" x1="250" y1="198" x2="250" y2="198" stroke="#a3e635" stroke-width="1.5" stroke-dasharray="4,4" opacity="0"/>
+        <line id="sp2" x1="250" y1="198" x2="250" y2="198" stroke="#a3e635" stroke-width="1.5" stroke-dasharray="4,4" opacity="0"/>
+        <line id="sp3" x1="250" y1="198" x2="250" y2="198" stroke="#a3e635" stroke-width="1.5" stroke-dasharray="4,4" opacity="0"/>
+        <line id="sp4" x1="250" y1="198" x2="250" y2="198" stroke="#a3e635" stroke-width="1.5" stroke-dasharray="4,4" opacity="0"/>
+        <line id="sp5" x1="250" y1="198" x2="250" y2="198" stroke="#a3e635" stroke-width="1.5" stroke-dasharray="4,4" opacity="0"/>
+        <line id="sp6" x1="250" y1="198" x2="250" y2="198" stroke="#a3e635" stroke-width="1.5" stroke-dasharray="4,4" opacity="0"/>
+        <!-- Outer ring -->
+        <circle cx="250" cy="250" r="175" fill="none" stroke="#a3e635" stroke-width="0.5" opacity="0.08"/>
+        <!-- Center logo -->
+        <circle cx="250" cy="250" r="52" fill="#2a2f3a" stroke="#a3e635" stroke-width="2"/>
+        <circle cx="250" cy="250" r="48" fill="none" stroke="#a3e635" stroke-width="0.5" opacity="0.3"/>
+        <text x="250" y="256" font-family="-apple-system,sans-serif" font-size="19" font-weight="900" text-anchor="middle" fill="white">Prog<tspan fill="#a3e635" font-style="italic">Fit</tspan></text>
+        <!-- Icon nodes — başta gizli -->
+        <!-- 1 top: Haftalık Program -->
+        <g id="hub-n1" opacity="0">
+          <circle cx="250" cy="75" r="42" fill="#2a2f3a" stroke="#a3e635" stroke-width="1.5"/>
+          <text x="250" y="70" class="hub-emoji">📅</text>
+          <text x="250" y="90" class="hub-lbl" data-i="hub_n1a">Haftalık</text>
+          <text x="250" y="102" class="hub-lbl" data-i="hub_n1b">Program</text>
+        </g>
+        <!-- 2 top-right: Gelişim -->
+        <g id="hub-n2" opacity="0">
+          <circle cx="405" cy="145" r="42" fill="#2a2f3a" stroke="#a3e635" stroke-width="1.5"/>
+          <text x="405" y="140" class="hub-emoji">📈</text>
+          <text x="405" y="160" class="hub-lbl" data-i="hub_n2a">Gelişim</text>
+          <text x="405" y="172" class="hub-lbl" data-i="hub_n2b">Takibi</text>
+        </g>
+        <!-- 3 bottom-right: Kalori -->
+        <g id="hub-n3" opacity="0">
+          <circle cx="405" cy="355" r="42" fill="#2a2f3a" stroke="#a3e635" stroke-width="1.5"/>
+          <text x="405" y="350" class="hub-emoji">🥗</text>
+          <text x="405" y="370" class="hub-lbl" data-i="hub_n3a">Kalori</text>
+          <text x="405" y="382" class="hub-lbl" data-i="hub_n3b">Takibi</text>
+        </g>
+        <!-- 4 bottom: Egzersiz -->
+        <g id="hub-n4" opacity="0">
+          <circle cx="250" cy="425" r="42" fill="#2a2f3a" stroke="#a3e635" stroke-width="1.5"/>
+          <text x="250" y="420" class="hub-emoji">▶️</text>
+          <text x="250" y="440" class="hub-lbl" data-i="hub_n4a">Egzersiz</text>
+          <text x="250" y="452" class="hub-lbl" data-i="hub_n4b">Rehberi</text>
+        </g>
+        <!-- 5 bottom-left: Online Koçluk -->
+        <g id="hub-n5" opacity="0">
+          <circle cx="95" cy="355" r="42" fill="#2a2f3a" stroke="#a3e635" stroke-width="1.5"/>
+          <text x="95" y="350" class="hub-emoji">👨‍💼</text>
+          <text x="95" y="370" class="hub-lbl" data-i="hub_n5a">Online</text>
+          <text x="95" y="382" class="hub-lbl" data-i="hub_n5b">Koçluk</text>
+        </g>
+        <!-- 6 top-left: Yağ Oranı -->
+        <g id="hub-n6" opacity="0">
+          <circle cx="95" cy="145" r="42" fill="#2a2f3a" stroke="#a3e635" stroke-width="1.5"/>
+          <text x="95" y="140" class="hub-emoji">📏</text>
+          <text x="95" y="160" class="hub-lbl" data-i="hub_n6a">Yağ Oranı</text>
+          <text x="95" y="172" class="hub-lbl" data-i="hub_n6b">Hesaplama</text>
+        </g>
+      </svg>
     </div>
     <p class="del-label" data-i="del_label">Tek uygulama, her şey dahil</p>
     <div class="feat-cards">
@@ -777,6 +835,97 @@ const T={
   }
 };
 
+
+// ── HUB ANIMATION ──
+const hubSpokes = [
+  {id:'sp1', x2:250, y2:117},
+  {id:'sp2', x2:363, y2:187},
+  {id:'sp3', x2:363, y2:313},
+  {id:'sp4', x2:250, y2:383},
+  {id:'sp5', x2:137, y2:313},
+  {id:'sp6', x2:137, y2:187},
+];
+const hubNodes = ['hub-n1','hub-n2','hub-n3','hub-n4','hub-n5','hub-n6'];
+
+function resetHub(){
+  hubSpokes.forEach(s=>{
+    const el=document.getElementById(s.id);
+    if(el){el.setAttribute('x2',250);el.setAttribute('y2',198);el.setAttribute('opacity',0);}
+  });
+  hubNodes.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el){el.setAttribute('opacity',0);}
+  });
+}
+
+async function runHub(){
+  resetHub();
+  await new Promise(r=>setTimeout(r,200));
+  for(let i=0;i<6;i++){
+    const sp=document.getElementById(hubSpokes[i].id);
+    const nd=document.getElementById(hubNodes[i]);
+    if(sp){
+      sp.setAttribute('opacity',0.4);
+      const startT=Date.now();
+      const dur=400;
+      const tx=hubSpokes[i].x2, ty=hubSpokes[i].y2;
+      const animate=()=>{
+        const p=Math.min((Date.now()-startT)/dur,1);
+        const ease=1-Math.pow(1-p,2);
+        sp.setAttribute('x2', 250+(tx-250)*ease);
+        sp.setAttribute('y2', 198+(ty-198)*ease);
+        if(p<1) requestAnimationFrame(animate);
+      };
+      requestAnimationFrame(animate);
+    }
+    await new Promise(r=>setTimeout(r,180));
+    if(nd){
+      nd.setAttribute('opacity',0);
+      const startT=Date.now();
+      const dur=300;
+      const animateNode=()=>{
+        const p=Math.min((Date.now()-startT)/dur,1);
+        nd.setAttribute('opacity', p);
+        if(p<1) requestAnimationFrame(animateNode);
+      };
+      requestAnimationFrame(animateNode);
+    }
+    await new Promise(r=>setTimeout(r,120));
+  }
+}
+
+// Hub observer
+const hubObs=new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      if(!loopTimers['hub']){
+        runHub();
+        loopTimers['hub']=setInterval(runHub, 5500);
+      }
+    } else {
+      if(loopTimers['hub']){clearInterval(loopTimers['hub']);delete loopTimers['hub'];}
+    }
+  });
+},{threshold:0.3});
+
+window.addEventListener('load',()=>{
+  const hubEl=document.getElementById('hub-wrap');
+  if(hubEl) hubObs.observe(hubEl);
+});
+
+// Hub i18n labels
+function updateHubLabels(lang){
+  const labels={
+    tr:{n1a:'Haftalık',n1b:'Program',n2a:'Gelişim',n2b:'Takibi',n3a:'Kalori',n3b:'Takibi',n4a:'Egzersiz',n4b:'Rehberi',n5a:'Online',n5b:'Koçluk',n6a:'Yağ Oranı',n6b:'Hesaplama'},
+    en:{n1a:'Weekly',n1b:'Program',n2a:'Progress',n2b:'Tracking',n3a:'Calorie',n3b:'Tracking',n4a:'Exercise',n4b:'Guide',n5a:'Online',n5b:'Coaching',n6a:'Body Fat',n6b:'Calculator'},
+    ru:{n1a:'Недельная',n1b:'программа',n2a:'Прогресс',n2b:'',n3a:'Калории',n3b:'',n4a:'Упражнения',n4b:'',n5a:'Онлайн',n5b:'тренер',n6a:'Расчёт',n6b:'жира'}
+  };
+  const d=labels[lang]||labels.tr;
+  ['n1a','n1b','n2a','n2b','n3a','n3b','n4a','n4b','n5a','n5b','n6a','n6b'].forEach(k=>{
+    document.querySelectorAll('[data-i="hub_'+k+'"]').forEach(el=>el.textContent=d[k]);
+  });
+}
+
 function setLang(l){
   document.documentElement.lang=l;
   const d=T[l];
@@ -784,6 +933,7 @@ function setLang(l){
   document.querySelectorAll('.lb').forEach(b=>b.classList.toggle('on',b.textContent===l.toUpperCase()));
   document.title=l==='ru'?'ProgFit – Всё в одном':l==='en'?'ProgFit – All-in-One Fitness':'ProgFit – Hepsi Bir Arada';
   renderReviews(l);
+  updateHubLabels(l);
   applyDeviceOrder(l);
 }
 
