@@ -894,16 +894,14 @@ async function runHub(){
   }
 }
 
-// Hub observer
+// Hub observer — sadece bir kez
+let hubPlayed=false;
 const hubObs=new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      if(!loopTimers['hub']){
-        runHub();
-        loopTimers['hub']=setInterval(runHub, 5500);
-      }
-    } else {
-      if(loopTimers['hub']){clearInterval(loopTimers['hub']);delete loopTimers['hub'];}
+    if(entry.isIntersecting && !hubPlayed){
+      hubPlayed=true;
+      runHub();
+      hubObs.disconnect();
     }
   });
 },{threshold:0.3});
