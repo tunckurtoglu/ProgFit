@@ -132,6 +132,30 @@ section{padding:80px 5%;}
 /* Light bg phone (nutrition/progress/fat) */
 .sc-phone-lt{background:var(--bg);border-radius:34px;border:2px solid rgba(255,255,255,0.12);overflow:hidden;position:relative;box-shadow:0 40px 80px rgba(0,0,0,.6);margin:0 auto;display:flex;flex-direction:column;}
 
+/* DIFF TABLE — kısa-öz, tik/çarpı tablo */
+.diff{border-top:1px solid var(--border);}
+.diff-inner{max-width:760px;margin:0 auto;text-align:center;}
+.diff-wrap{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;text-align:left;margin-top:8px;}
+.diff-table{width:100%;border-collapse:collapse;}
+.diff-table thead th{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;padding:16px 14px;border-bottom:1px solid var(--border);text-align:left;color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.02);}
+.diff-table thead th.col-pf{color:var(--accent);background:rgba(163,230,53,0.06);text-align:center;width:130px;position:relative;}
+.diff-table thead th.col-pf::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--accent);}
+.diff-table thead th.col-other{text-align:center;width:130px;}
+.diff-table tbody td{padding:14px;border-bottom:1px solid var(--border);font-size:13px;color:#fff;font-weight:600;line-height:1.4;vertical-align:middle;}
+.diff-table tbody td.col-pf{background:rgba(163,230,53,0.04);text-align:center;}
+.diff-table tbody td.col-other{text-align:center;color:rgba(255,255,255,0.5);}
+.diff-table tbody tr:last-child td{border-bottom:none;}
+.diff-table tbody tr:hover{background:rgba(255,255,255,0.015);}
+.diff-table tbody tr:hover td.col-pf{background:rgba(163,230,53,0.07);}
+.dyes{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:rgba(163,230,53,0.18);color:var(--accent);font-weight:900;font-size:14px;}
+.dno{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:rgba(248,113,113,0.12);color:#f87171;font-weight:900;font-size:14px;}
+@media(max-width:780px){
+  .diff-table thead th{font-size:9px;padding:12px 10px;letter-spacing:0.6px;}
+  .diff-table thead th.col-pf,.diff-table thead th.col-other{width:80px;}
+  .diff-table tbody td{padding:12px 10px;font-size:12px;}
+  .dyes,.dno{width:24px;height:24px;font-size:12px;}
+}
+
 /* PROOF */
 .proof{border-top:1px solid var(--border);}
 .proof-inner{max-width:760px;margin:0 auto;text-align:center;}
@@ -654,6 +678,48 @@ footer p{font-size:11px;color:rgba(255,255,255,0.28);}
   </div>
 </section>
 
+<!-- DIFF -->
+<section class="diff">
+  <div class="sec-inner diff-inner">
+    <h2 class="sec-h" style="margin-bottom:12px;"><span data-i="diff_h">Neden</span> <span class="ac" data-i="diff_ac">ProgFit?</span></h2>
+    <p class="sec-sub" data-i="diff_sub">Daha iyiyi değil, hiç yapılmamış olanı yapıyor.</p>
+
+    <div class="diff-wrap">
+      <table class="diff-table">
+        <thead>
+          <tr>
+            <th data-i="diff_th_feat">Özellik</th>
+            <th class="col-pf">ProgFit</th>
+            <th class="col-other" data-i="diff_th_other">Çoğu uygulama</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-i="diff_r1">Kişiye özel hesaplanmış ağırlık hedefleri</td>
+            <td class="col-pf"><span class="dyes">✓</span></td>
+            <td class="col-other"><span class="dno">×</span></td>
+          </tr>
+          <tr>
+            <td data-i="diff_r2">Vücut yağ oranı + kas kütlesi analizi</td>
+            <td class="col-pf"><span class="dyes">✓</span></td>
+            <td class="col-other"><span class="dno">×</span></td>
+          </tr>
+          <tr>
+            <td data-i="diff_r3">3 dilde form ipuçları (TR/EN/RU)</td>
+            <td class="col-pf"><span class="dyes">✓</span></td>
+            <td class="col-other"><span class="dno">×</span></td>
+          </tr>
+          <tr>
+            <td data-i="diff_r4">Kişisel antrenman ve beslenme planı raporu</td>
+            <td class="col-pf"><span class="dyes">✓</span></td>
+            <td class="col-other"><span class="dno">×</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
 <!-- PROOF -->
 <section class="proof">
   <div class="proof-inner">
@@ -775,6 +841,12 @@ const T={
     coach_tag:'Online Koçluk',coach_h:'Ölçülerini gir,',coach_ac:'programın gelsin.',coach_p:'Hedefini ve ölçülerini gir. Vücut analizi, makro hedefi, antrenman programı ve yemek listesi e-postana geliyor.',coach_c1:'Vücut analizi + yağ oranı hesabı',coach_c2:'Kişiye özel kalori ve makro hedefi',coach_c3:'Antrenman programı (set, tekrar, dinlenme)',coach_c4:'3 dilde: TR / EN / RU',
     em_sub:'Kişisel Fitness Raporu',em_fat:'Vücut Yağı',em_muscle:'Kas',em_cal:'Kalori',em_days:'Antrenman',em_days_val:'4g/hf',em_analysis:'Mevcut Durum Analizi',em_row_fat:'Vücut Yağ Oranı',em_row_lean:'Yağsız Kütle',em_row_tdee:'TDEE',em_row_strategy:'Strateji',em_training:'Antrenman Programı',em_tip:'💡 Bu programı ProgFit\'e kaydederek haftalık takibini yapabilirsin.',em_ex:'Egzersiz',em_sets:'Set×Tekrar',em_rest:'Dinlenme',em_footer:'Bu rapor yalnızca bilgilendirme amaçlıdır.',
     rev_tag:'Beta Kullanıcıları',rev_h:'İlk İzlenimler',beta_n:'* Beta test sürecinden alınan geri bildirimler',
+    diff_tag:'Neden ProgFit?',diff_h:'Neden',diff_ac:'ProgFit?',diff_sub:'Daha iyiyi değil, hiç yapılmamış olanı yapıyor.',
+    diff_th_feat:'Özellik',diff_th_other:'Çoğu uygulama',
+    diff_r1:'Kişiye özel hesaplanmış ağırlık hedefleri',
+    diff_r2:'Vücut yağ oranı + kas kütlesi analizi',
+    diff_r3:'3 dilde form ipuçları (TR/EN/RU)',
+    diff_r4:'Kişisel antrenman ve beslenme planı raporu',
     cta_h:'Tek uygulama.',cta_ac:'Sonsuz gelişim.',cta_sub:'Fitness için ihtiyacın olan her şey burada.',ios_s2:'App Store\'dan İndir',gp_s2:'Google Play\'den İndir',fc:'© 2025 ProgFit. Tüm hakları saklıdır.'
   },
   en:{
@@ -803,6 +875,12 @@ const T={
     coach_tag:'Online Coaching',coach_h:'Enter your stats,',coach_ac:'get your program.',coach_p:'Enter your goal and measurements. Body analysis, macro targets, training program and food list sent to your email.',coach_c1:'Body analysis + body fat calculation',coach_c2:'Personalized daily calorie and macro target',coach_c3:'Training program table (sets, reps, rest)',coach_c4:'3 languages: TR / EN / RU',
     em_sub:'Personal Fitness Report',em_fat:'Body Fat',em_muscle:'Muscle',em_cal:'Calories',em_days:'Training',em_days_val:'4 days/wk',em_analysis:'Current Status Analysis',em_row_fat:'Body Fat %',em_row_lean:'Lean Mass',em_row_tdee:'TDEE',em_row_strategy:'Strategy',em_training:'Training Program',em_tip:'💡 Save this program to ProgFit to track your weekly training.',em_ex:'Exercise',em_sets:'Sets×Reps',em_rest:'Rest',em_footer:'This report is for informational purposes only.',
     rev_tag:'Beta Users',rev_h:'First Impressions',beta_n:'* Real feedback from beta testing period',
+    diff_tag:'Why ProgFit?',diff_h:'Why',diff_ac:'ProgFit?',diff_sub:'Not better — but what no one else has done.',
+    diff_th_feat:'Feature',diff_th_other:'Most apps',
+    diff_r1:'Personalized target weights',
+    diff_r2:'Body fat % + muscle mass analysis',
+    diff_r3:'Form tips in 3 languages (TR/EN/RU)',
+    diff_r4:'Personalized training & nutrition plan report',
     cta_h:'One app.',cta_ac:'Endless progress.',cta_sub:'Everything you need for fitness is here.',ios_s2:'Download on App Store',gp_s2:'Get it on Google Play',fc:'© 2025 ProgFit. All rights reserved.'
   },
   ru:{
@@ -831,6 +909,12 @@ const T={
     coach_tag:'Онлайн-тренер',coach_h:'Введи замеры,',coach_ac:'получи программу.',coach_p:'Введи цель и замеры. Анализ тела, макросы, программа тренировок и список продуктов — на почту.',coach_c1:'Анализ тела + расчёт процента жира',coach_c2:'Персональная дневная норма калорий и макросов',coach_c3:'Таблица программы тренировок (подходы, повторения)',coach_c4:'3 языка: TR / EN / RU',
     em_sub:'Персональный фитнес-отчёт',em_fat:'Жир',em_muscle:'Мышцы',em_cal:'Калории',em_days:'Тренировки',em_days_val:'4 дн/нед',em_analysis:'Анализ текущего состояния',em_row_fat:'Процент жира',em_row_lean:'Сухая масса',em_row_tdee:'TDEE',em_row_strategy:'Стратегия',em_training:'Программа тренировок',em_tip:'💡 Сохрани программу в ProgFit для отслеживания тренировок.',em_ex:'Упражнение',em_sets:'Подх.×Повт.',em_rest:'Отдых',em_footer:'Этот отчёт носит информационный характер.',
     rev_tag:'Бета-пользователи',rev_h:'Первые впечатления',beta_n:'* Реальные отзывы из периода бета-тестирования',
+    diff_tag:'Почему ProgFit?',diff_h:'Почему',diff_ac:'ProgFit?',diff_sub:'Не лучше — а то, чего никто не делал.',
+    diff_th_feat:'Функция',diff_th_other:'Большинство приложений',
+    diff_r1:'Персональные расчётные целевые веса',
+    diff_r2:'Анализ процента жира + мышечной массы',
+    diff_r3:'Советы по технике на 3 языках (TR/EN/RU)',
+    diff_r4:'Персональный отчёт по тренировкам и питанию',
     cta_h:'Одно приложение.',cta_ac:'Бесконечный прогресс.',cta_sub:'Всё необходимое для фитнеса — здесь.',ios_s2:'Загрузить в App Store',gp_s2:'Получить в Google Play',fc:'© 2025 ProgFit. Все права защищены.'
   }
 };
