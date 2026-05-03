@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — ProgFit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e1219;
+    --bg-elev: #1a1f2e;
+    --bg-card: #232938;
+    --accent: #a3e635;
+    --accent-dim: rgba(163, 230, 53, 0.12);
+    --text: #f0f3f8;
+    --text-muted: #8a92a3;
+    --text-subtle: #5a6275;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.12);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Geist', -apple-system, sans-serif;
+    line-height: 1.65;
+    font-size: 16px;
+    font-feature-settings: 'cv11', 'ss01';
+    min-height: 100vh;
+  }
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(14, 18, 25, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand {
+    display: flex;
+    align-items: baseline;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+  }
+  .brand-prog { color: var(--text); }
+  .brand-fit { color: var(--accent); font-style: italic; }
+  .lang-switch {
+    display: flex;
+    gap: 4px;
+    background: var(--bg-card);
+    border-radius: 8px;
+    padding: 3px;
+    border: 1px solid var(--border);
+  }
+  .lang-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    padding: 5px 11px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: all 0.15s ease;
+  }
+  .lang-btn:hover { color: var(--text); }
+  .lang-btn.active {
+    background: var(--accent);
+    color: #0e1219;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 32px 120px;
+  }
+  .hero {
+    margin-bottom: 56px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .doc-tag {
+    display: inline-block;
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px;
+    color: var(--accent);
+    background: var(--accent-dim);
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(163, 230, 53, 0.25);
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+  .lede {
+    color: var(--text-muted);
+    font-size: 18px;
+    line-height: 1.65;
+    max-width: 580px;
+  }
+  .meta {
+    margin-top: 24px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-family: 'Geist Mono', monospace;
+    font-size: 13px;
+    color: var(--text-subtle);
+  }
+  .meta strong {
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin: 56px 0 16px;
+    color: var(--text);
+    scroll-margin-top: 80px;
+  }
+  h2 .num {
+    color: var(--text-subtle);
+    font-family: 'Geist Mono', monospace;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 12px;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 28px 0 12px;
+    color: var(--text);
+  }
+  p {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+  p strong, li strong { color: var(--text); font-weight: 600; }
+  ul {
+    list-style: none;
+    margin-bottom: 16px;
+  }
+  ul li {
+    color: var(--text-muted);
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+  }
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(163, 230, 53, 0.3);
+    transition: all 0.15s ease;
+  }
+  a:hover {
+    border-bottom-color: var(--accent);
+  }
+  .callout {
+    background: var(--bg-elev);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 24px 0;
+  }
+  .callout p { margin: 0; color: var(--text); font-size: 15px; }
+  .callout-warning {
+    background: rgba(248, 113, 113, 0.06);
+    border-left-color: #f87171;
+  }
+  .callout-warning p { color: var(--text); }
+  .toc {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 40px 0;
+  }
+  .toc-title {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-subtle);
+    margin-bottom: 14px;
+  }
+  .toc ol {
+    list-style: none;
+    counter-reset: section;
+    column-count: 2;
+    column-gap: 32px;
+  }
+  .toc ol li {
+    counter-increment: section;
+    margin-bottom: 8px;
+    break-inside: avoid;
+  }
+  .toc ol li a {
+    color: var(--text-muted);
+    border-bottom: none;
+    font-size: 14px;
+    display: block;
+  }
+  .toc ol li a:hover { color: var(--accent); }
+  .toc ol li a::before {
+    content: counter(section, decimal-leading-zero) " ";
+    color: var(--text-subtle);
+    font-family: 'Geist Mono', monospace;
+    margin-right: 8px;
+    font-size: 12px;
+  }
+  .price-card {
+    background: var(--bg-elev);
+    border: 1px solid var(--border-strong);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+  }
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .price-row:last-child { border-bottom: none; }
+  .price-label { color: var(--text); font-weight: 600; font-size: 15px; }
+  .price-value { color: var(--accent); font-weight: 700; font-family: 'Geist Mono', monospace; }
+  .price-note { color: var(--text-subtle); font-size: 13px; margin-top: 4px; }
+  footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+    border-top: 1px solid var(--border);
+    color: var(--text-subtle);
+    font-size: 13px;
+  }
+  footer a { color: var(--text-muted); border-bottom: none; margin-right: 20px; }
+  footer a:hover { color: var(--accent); }
+  .lang-content { display: none; }
+  .lang-content.active { display: block; }
+  @media (max-width: 640px) {
+    main { padding: 32px 20px 80px; }
+    .nav-inner { padding: 12px 20px; }
+    h1 { font-size: 32px; }
+    .toc ol { column-count: 1; }
+    .meta { gap: 12px; flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="https://progfit.fit" class="brand">
+      <span class="brand-prog">Prog</span><span class="brand-fit">Fit</span>
+    </a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="tr">TR</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ru">RU</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     TÜRKÇE
+     ═══════════════════════════════════════════════════════ -->
+<div class="lang-content active" data-lang="tr">
+<main>
+  <div class="hero">
+    <span class="doc-tag">KULLANIM KOŞULLARI</span>
+    <h1>Açık ve adil koşullar.</h1>
+    <p class="lede">ProgFit'i kullanırken uymayı kabul ettiğin kurallar. Karmaşık hukuki dil yok, sadece ihtiyacın olan bilgi.</p>
+    <div class="meta">
+      <div><strong>Yürürlük tarihi:</strong> 3 Mayıs 2026</div>
+      <div><strong>Sürüm:</strong> 1.0</div>
+    </div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">İçindekiler</div>
+    <ol>
+      <li><a href="#tr-1">Kabul ve Onay</a></li>
+      <li><a href="#tr-2">Hizmet Tanımı</a></li>
+      <li><a href="#tr-3">Hesap Sorumluluğu</a></li>
+      <li><a href="#tr-4">Abonelikler ve Ücretler</a></li>
+      <li><a href="#tr-5">Ücretsiz Deneme</a></li>
+      <li><a href="#tr-6">Otomatik Yenileme</a></li>
+      <li><a href="#tr-7">İptal ve İade</a></li>
+      <li><a href="#tr-8">Sağlık Uyarısı</a></li>
+      <li><a href="#tr-9">Yasaklı Davranışlar</a></li>
+      <li><a href="#tr-10">Fikri Mülkiyet</a></li>
+      <li><a href="#tr-11">Sorumluluk Reddi</a></li>
+      <li><a href="#tr-12">Değişiklikler</a></li>
+      <li><a href="#tr-13">İletişim</a></li>
+    </ol>
+  </div>
+
+  <h2 id="tr-1"><span class="num">01</span>Kabul ve Onay</h2>
+  <p>ProgFit uygulamasını ("Hizmet") kullanarak, bu Kullanım Koşullarını ve <a href="/privacy">Gizlilik Politikamızı</a> okuduğunu, anladığını ve kabul ettiğini onaylamış olursun. Bu koşulları kabul etmiyorsan, lütfen uygulamayı kullanma.</p>
+  <p>Hizmeti kullanmak için <strong>en az 13 yaşında olman</strong> gerekir. 13-18 yaş arası kullanıcıların ebeveyn izni alması tavsiye edilir.</p>
+
+  <h2 id="tr-2"><span class="num">02</span>Hizmet Tanımı</h2>
+  <p>ProgFit, fitness ve sağlık takibi sunan bir mobil uygulamadır. Hizmet şunları içerir:</p>
+  <ul>
+    <li>Antrenman programı oluşturma ve takip</li>
+    <li>Vücut ölçümü hesaplamaları (yağ oranı, kas kütlesi)</li>
+    <li>Beslenme ve kalori takibi (Pro özellik)</li>
+    <li>İlerleme grafikleri ve hedef belirleme (Pro özellik)</li>
+    <li>Profesyonel antrenörlerin hazırladığı kişiselleştirilmiş programlar (Pro özellik)</li>
+  </ul>
+
+  <h2 id="tr-3"><span class="num">03</span>Hesap Sorumluluğu</h2>
+  <p>Hesap oluştururken doğru ve güncel bilgi sağlamayı kabul edersin. Hesabının güvenliğinden ve hesabın altında gerçekleşen tüm aktivitelerden sen sorumlusun. Apple Sign-In kullanıyorsan, Apple'ın güvenlik önlemleri seni korur.</p>
+  <p>Hesabını başkalarıyla paylaşamaz, satamaz veya devredemezsin.</p>
+
+  <h2 id="tr-4"><span class="num">04</span>Abonelikler ve Ücretler</h2>
+  <p>ProgFit, ücretsiz temel özellikler ve premium "ProgFit Pro" abonelik seçeneği sunar.</p>
+
+  <div class="price-card">
+    <div class="price-row">
+      <div>
+        <div class="price-label">Aylık Abonelik</div>
+        <div class="price-note">3 gün ücretsiz deneme dahil</div>
+      </div>
+      <div class="price-value">$9.99 / ay</div>
+    </div>
+    <div class="price-row">
+      <div>
+        <div class="price-label">Yıllık Abonelik</div>
+        <div class="price-note">3 gün ücretsiz deneme dahil · %58 tasarruf</div>
+      </div>
+      <div class="price-value">$49.99 / yıl</div>
+    </div>
+    <div class="price-row">
+      <div>
+        <div class="price-label">Ekstra Koçluk Programı</div>
+        <div class="price-note">Aylık kotayı aşan kullanıcılar için (tek seferlik)</div>
+      </div>
+      <div class="price-value">$2.99</div>
+    </div>
+  </div>
+
+  <p>Fiyatlar, App Store'un ülkenize özel para biriminde gösterilir. Apple'ın yerel fiyatlandırma matrisine göre çevrilir ve KDV dahildir.</p>
+
+  <h2 id="tr-5"><span class="num">05</span>Ücretsiz Deneme</h2>
+  <p>Yeni kullanıcılara <strong>3 günlük ücretsiz deneme</strong> sunulur. Deneme süresince tüm Pro özelliklere tam erişimin olur.</p>
+  <ul>
+    <li>Deneme süresinin sonunda, seçtiğin abonelik <strong>otomatik olarak ücretlendirilir</strong></li>
+    <li>İptal etmek istersen, <strong>deneme bitmeden en az 24 saat önce</strong> aboneliğini iptal etmelisin</li>
+    <li>Deneme süresince istediğin zaman iptal edebilirsin — kalan süre boyunca Pro özelliklere erişimin devam eder</li>
+    <li>Bir Apple ID için sadece bir kez ücretsiz deneme hakkı vardır</li>
+  </ul>
+
+  <h2 id="tr-6"><span class="num">06</span>Otomatik Yenileme</h2>
+  <div class="callout">
+    <p><strong>ProgFit Pro abonelikleri otomatik olarak yenilenir.</strong> Mevcut abonelik süresinin bitmesinden 24 saat öncesine kadar iptal edilmediği takdirde, abonelik aynı süre için otomatik olarak yenilenir ve Apple ID'ne kayıtlı ödeme yöntemiyle ücretlendirilir.</p>
+  </div>
+  <p>Bu otomatik yenileme:</p>
+  <ul>
+    <li>Aylık abonelikler için her ay aynı tarihte gerçekleşir</li>
+    <li>Yıllık abonelikler için her yıl aynı tarihte gerçekleşir</li>
+    <li>Ücret, App Store'da gösterilen mevcut fiyat üzerinden alınır</li>
+  </ul>
+
+  <h2 id="tr-7"><span class="num">07</span>İptal ve İade</h2>
+
+  <h3>İptal</h3>
+  <p>Aboneliğini istediğin zaman iptal edebilirsin:</p>
+  <ul>
+    <li><strong>iPhone'unda:</strong> Ayarlar → [Adın] → Abonelikler → ProgFit → Aboneliği İptal Et</li>
+    <li>İptal sonrası, mevcut fatura döneminin sonuna kadar Pro özelliklere erişimin devam eder</li>
+    <li>İptal işlemi otomatik yenilemeyi durdurur</li>
+  </ul>
+
+  <h3>İade</h3>
+  <p>Tüm satın almalar Apple App Store üzerinden işlendiği için, iade talepleri Apple'ın iade politikasına tabidir. İade için:</p>
+  <ul>
+    <li><a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> adresine gidebilir</li>
+    <li>Satın aldığın aboneliği seç ve "İade Talep Et"i tıkla</li>
+    <li>Apple talebini değerlendirir ve uygun gördüğü iadeleri 5-7 iş günü içinde yapar</li>
+  </ul>
+  <p>ProgFit, App Store üzerinden yapılan ödemeler için doğrudan iade gerçekleştiremez. Tüm iade işlemleri Apple tarafından yönetilir.</p>
+
+  <h2 id="tr-8"><span class="num">08</span>Sağlık Uyarısı</h2>
+  <div class="callout callout-warning">
+    <p><strong>Önemli:</strong> ProgFit bir tıbbi cihaz veya tıbbi tavsiye platformu değildir. Vücut yağ oranı hesaplamaları, antrenman programları ve beslenme önerileri yalnızca bilgilendirme amaçlıdır.</p>
+  </div>
+  <p>Yeni bir antrenman programına başlamadan veya beslenme alışkanlıklarını değiştirmeden önce <strong>mutlaka bir doktora veya yetkili bir sağlık uzmanına danış</strong>. Özellikle:</p>
+  <ul>
+    <li>Mevcut bir sağlık problemin varsa</li>
+    <li>Kronik bir hastalığın varsa (diyabet, kalp rahatsızlığı vb.)</li>
+    <li>Hamileysen veya yeni doğum yaptıysan</li>
+    <li>Bir yaralanmadan iyileşiyorsan</li>
+  </ul>
+  <p>Sağlığını ve güvenliğini ProgFit'in tavsiyelerinin önüne koymalısın. Uygulamadan kaynaklanan sağlık sorunlarından ProgFit sorumlu tutulamaz.</p>
+
+  <h2 id="tr-9"><span class="num">09</span>Yasaklı Davranışlar</h2>
+  <p>ProgFit'i kullanırken şunları yapmamayı kabul edersin:</p>
+  <ul>
+    <li>Hizmeti yasalara aykırı veya yetkisiz amaçlarla kullanmak</li>
+    <li>Hizmetin altyapısına saldırmak, hack'lemek veya tersine mühendislik yapmak</li>
+    <li>Otomatik araçlarla (bot) hizmeti kötüye kullanmak</li>
+    <li>Başka bir kullanıcının hesabını kullanmak</li>
+    <li>Hizmet üzerinden virüs, kötü amaçlı yazılım veya zararlı içerik yaymak</li>
+    <li>Hizmetin tersine mühendisliğini yapmak veya kaynak kodu çıkarmaya çalışmak</li>
+  </ul>
+  <p>Bu kuralları ihlal eden hesaplar, önceden bildirim yapılmaksızın kapatılabilir.</p>
+
+  <h2 id="tr-10"><span class="num">10</span>Fikri Mülkiyet</h2>
+  <p>ProgFit uygulamasının tüm içeriği, tasarımı, kodu, logoları ve markaları ProgFit'in fikri mülkiyetidir. Ticari amaçlarla kullanılamaz, kopyalanamaz veya çoğaltılamaz.</p>
+  <p>Hizmet kapsamında oluşturduğun veriler (antrenman geçmişi, ölçümler vb.) sana aittir. İstediğin zaman bu verileri indirebilir veya silebilirsin.</p>
+
+  <h2 id="tr-11"><span class="num">11</span>Sorumluluk Reddi</h2>
+  <p>ProgFit hizmeti "olduğu gibi" sunulur. Hizmetin kesintisiz, hatasız veya tüm beklentileri karşılar nitelikte olacağı garanti edilmez.</p>
+  <p>Yasaların izin verdiği azami ölçüde, ProgFit aşağıdakilerden sorumlu tutulamaz:</p>
+  <ul>
+    <li>Dolaylı, tesadüfi veya sonuç olarak ortaya çıkan zararlar</li>
+    <li>Veri kaybı, gelir kaybı veya iş kesintisi</li>
+    <li>Hizmetin geçici kesintilerinden kaynaklanan zararlar</li>
+    <li>Sağlık, fitness veya beslenme tavsiyelerinden kaynaklanan sorunlar</li>
+  </ul>
+
+  <h2 id="tr-12"><span class="num">12</span>Değişiklikler</h2>
+  <p>Bu Kullanım Koşullarında zaman zaman değişiklik yapma hakkımız vardır. Önemli değişiklikler olduğunda uygulama içinde bildirim göstereceğiz. Değişikliklerden sonra hizmeti kullanmaya devam etmen, yeni koşulları kabul ettiğin anlamına gelir.</p>
+
+  <h2 id="tr-13"><span class="num">13</span>İletişim</h2>
+  <p>Bu Kullanım Koşulları hakkında herhangi bir sorunuz varsa, lütfen iletişime geçin:</p>
+  <p><strong>E-posta:</strong> <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a><br>
+  <strong>Web:</strong> <a href="https://progfit.fit">progfit.fit</a></p>
+</main>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     ENGLISH
+     ═══════════════════════════════════════════════════════ -->
+<div class="lang-content" data-lang="en">
+<main>
+  <div class="hero">
+    <span class="doc-tag">TERMS OF SERVICE</span>
+    <h1>Clear and fair terms.</h1>
+    <p class="lede">The rules you agree to when using ProgFit. No complex legal jargon — just the information you need.</p>
+    <div class="meta">
+      <div><strong>Effective date:</strong> May 3, 2026</div>
+      <div><strong>Version:</strong> 1.0</div>
+    </div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#en-1">Acceptance</a></li>
+      <li><a href="#en-2">Service Description</a></li>
+      <li><a href="#en-3">Account Responsibility</a></li>
+      <li><a href="#en-4">Subscriptions and Fees</a></li>
+      <li><a href="#en-5">Free Trial</a></li>
+      <li><a href="#en-6">Auto-Renewal</a></li>
+      <li><a href="#en-7">Cancellation and Refunds</a></li>
+      <li><a href="#en-8">Health Disclaimer</a></li>
+      <li><a href="#en-9">Prohibited Conduct</a></li>
+      <li><a href="#en-10">Intellectual Property</a></li>
+      <li><a href="#en-11">Disclaimer of Warranties</a></li>
+      <li><a href="#en-12">Changes</a></li>
+      <li><a href="#en-13">Contact</a></li>
+    </ol>
+  </div>
+
+  <h2 id="en-1"><span class="num">01</span>Acceptance</h2>
+  <p>By using the ProgFit application ("Service"), you confirm that you have read, understood, and agreed to these Terms of Service and our <a href="/privacy">Privacy Policy</a>. If you do not agree to these terms, please do not use the application.</p>
+  <p>To use the Service, you must be <strong>at least 13 years old</strong>. Users between 13-18 are advised to obtain parental consent.</p>
+
+  <h2 id="en-2"><span class="num">02</span>Service Description</h2>
+  <p>ProgFit is a mobile application offering fitness and health tracking. The Service includes:</p>
+  <ul>
+    <li>Workout program creation and tracking</li>
+    <li>Body measurement calculations (body fat, muscle mass)</li>
+    <li>Nutrition and calorie tracking (Pro feature)</li>
+    <li>Progress charts and goal setting (Pro feature)</li>
+    <li>Personalized programs by professional trainers (Pro feature)</li>
+  </ul>
+
+  <h2 id="en-3"><span class="num">03</span>Account Responsibility</h2>
+  <p>You agree to provide accurate and current information when creating an account. You are responsible for the security of your account and all activities that occur under your account. If you use Apple Sign-In, Apple's security measures protect you.</p>
+  <p>You may not share, sell, or transfer your account to others.</p>
+
+  <h2 id="en-4"><span class="num">04</span>Subscriptions and Fees</h2>
+  <p>ProgFit offers free basic features and a premium "ProgFit Pro" subscription option.</p>
+
+  <div class="price-card">
+    <div class="price-row">
+      <div>
+        <div class="price-label">Monthly Subscription</div>
+        <div class="price-note">Includes 3-day free trial</div>
+      </div>
+      <div class="price-value">$9.99 / mo</div>
+    </div>
+    <div class="price-row">
+      <div>
+        <div class="price-label">Annual Subscription</div>
+        <div class="price-note">Includes 3-day free trial · 58% savings</div>
+      </div>
+      <div class="price-value">$49.99 / year</div>
+    </div>
+    <div class="price-row">
+      <div>
+        <div class="price-label">Extra Coaching Program</div>
+        <div class="price-note">For users exceeding monthly quota (one-time)</div>
+      </div>
+      <div class="price-value">$2.99</div>
+    </div>
+  </div>
+
+  <p>Prices are displayed in your country's local currency on App Store. They are converted according to Apple's regional pricing matrix and include applicable taxes.</p>
+
+  <h2 id="en-5"><span class="num">05</span>Free Trial</h2>
+  <p>New users are offered a <strong>3-day free trial</strong>. During the trial, you have full access to all Pro features.</p>
+  <ul>
+    <li>At the end of the trial period, your selected subscription will be <strong>automatically charged</strong></li>
+    <li>If you wish to cancel, you must cancel your subscription <strong>at least 24 hours before</strong> the trial ends</li>
+    <li>You can cancel during the trial — you'll keep Pro access until the trial period ends</li>
+    <li>Only one free trial is available per Apple ID</li>
+  </ul>
+
+  <h2 id="en-6"><span class="num">06</span>Auto-Renewal</h2>
+  <div class="callout">
+    <p><strong>ProgFit Pro subscriptions auto-renew.</strong> Unless cancelled at least 24 hours before the end of the current subscription period, the subscription will automatically renew for the same period and be charged to the payment method registered with your Apple ID.</p>
+  </div>
+  <p>This auto-renewal:</p>
+  <ul>
+    <li>Occurs on the same date each month for monthly subscriptions</li>
+    <li>Occurs on the same date each year for annual subscriptions</li>
+    <li>Is charged at the current price displayed on App Store</li>
+  </ul>
+
+  <h2 id="en-7"><span class="num">07</span>Cancellation and Refunds</h2>
+
+  <h3>Cancellation</h3>
+  <p>You can cancel your subscription at any time:</p>
+  <ul>
+    <li><strong>On your iPhone:</strong> Settings → [Your Name] → Subscriptions → ProgFit → Cancel Subscription</li>
+    <li>After cancellation, you will continue to have access to Pro features until the end of the current billing period</li>
+    <li>Cancellation stops auto-renewal</li>
+  </ul>
+
+  <h3>Refunds</h3>
+  <p>Since all purchases are processed through the Apple App Store, refund requests are subject to Apple's refund policy. To request a refund:</p>
+  <ul>
+    <li>Visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></li>
+    <li>Select the subscription you purchased and click "Request a Refund"</li>
+    <li>Apple will evaluate your request and process eligible refunds within 5-7 business days</li>
+  </ul>
+  <p>ProgFit cannot directly process refunds for payments made through the App Store. All refund processes are managed by Apple.</p>
+
+  <h2 id="en-8"><span class="num">08</span>Health Disclaimer</h2>
+  <div class="callout callout-warning">
+    <p><strong>Important:</strong> ProgFit is not a medical device or medical advice platform. Body fat calculations, workout programs, and nutrition recommendations are for informational purposes only.</p>
+  </div>
+  <p>Before starting any new workout program or changing your eating habits, <strong>always consult with a doctor or qualified health professional</strong>. Especially if:</p>
+  <ul>
+    <li>You have an existing health condition</li>
+    <li>You have a chronic illness (diabetes, heart disease, etc.)</li>
+    <li>You are pregnant or recently gave birth</li>
+    <li>You are recovering from an injury</li>
+  </ul>
+  <p>You should put your health and safety above ProgFit's recommendations. ProgFit is not liable for any health issues arising from app use.</p>
+
+  <h2 id="en-9"><span class="num">09</span>Prohibited Conduct</h2>
+  <p>While using ProgFit, you agree not to:</p>
+  <ul>
+    <li>Use the Service for unlawful or unauthorized purposes</li>
+    <li>Attack, hack, or reverse-engineer the Service infrastructure</li>
+    <li>Abuse the Service with automated tools (bots)</li>
+    <li>Use another user's account</li>
+    <li>Distribute viruses, malware, or harmful content through the Service</li>
+    <li>Reverse-engineer or attempt to extract the source code</li>
+  </ul>
+  <p>Accounts that violate these rules may be terminated without prior notice.</p>
+
+  <h2 id="en-10"><span class="num">10</span>Intellectual Property</h2>
+  <p>All content, design, code, logos, and trademarks of the ProgFit application are the intellectual property of ProgFit. They cannot be used for commercial purposes, copied, or reproduced.</p>
+  <p>Data you create within the Service (workout history, measurements, etc.) belongs to you. You can download or delete this data at any time.</p>
+
+  <h2 id="en-11"><span class="num">11</span>Disclaimer of Warranties</h2>
+  <p>The ProgFit service is provided "as is". The Service is not guaranteed to be uninterrupted, error-free, or to meet all expectations.</p>
+  <p>To the maximum extent permitted by law, ProgFit cannot be held liable for:</p>
+  <ul>
+    <li>Indirect, incidental, or consequential damages</li>
+    <li>Data loss, revenue loss, or business interruption</li>
+    <li>Damages arising from temporary service interruptions</li>
+    <li>Issues arising from health, fitness, or nutrition advice</li>
+  </ul>
+
+  <h2 id="en-12"><span class="num">12</span>Changes</h2>
+  <p>We reserve the right to modify these Terms of Service from time to time. When significant changes occur, we will display a notification within the app. Your continued use of the Service after changes constitutes acceptance of the new terms.</p>
+
+  <h2 id="en-13"><span class="num">13</span>Contact</h2>
+  <p>If you have any questions about these Terms of Service, please contact us:</p>
+  <p><strong>Email:</strong> <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a><br>
+  <strong>Web:</strong> <a href="https://progfit.fit">progfit.fit</a></p>
+</main>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     RUSSIAN
+     ═══════════════════════════════════════════════════════ -->
+<div class="lang-content" data-lang="ru">
+<main>
+  <div class="hero">
+    <span class="doc-tag">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</span>
+    <h1>Понятные и честные условия.</h1>
+    <p class="lede">Правила, которые ты принимаешь при использовании ProgFit. Без сложного юридического языка — только то, что нужно знать.</p>
+    <div class="meta">
+      <div><strong>Дата вступления в силу:</strong> 3 мая 2026</div>
+      <div><strong>Версия:</strong> 1.0</div>
+    </div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Содержание</div>
+    <ol>
+      <li><a href="#ru-1">Принятие</a></li>
+      <li><a href="#ru-2">Описание сервиса</a></li>
+      <li><a href="#ru-3">Ответственность за аккаунт</a></li>
+      <li><a href="#ru-4">Подписки и оплата</a></li>
+      <li><a href="#ru-5">Бесплатный пробный период</a></li>
+      <li><a href="#ru-6">Автопродление</a></li>
+      <li><a href="#ru-7">Отмена и возврат</a></li>
+      <li><a href="#ru-8">Предупреждение о здоровье</a></li>
+      <li><a href="#ru-9">Запрещённые действия</a></li>
+      <li><a href="#ru-10">Интеллектуальная собственность</a></li>
+      <li><a href="#ru-11">Отказ от гарантий</a></li>
+      <li><a href="#ru-12">Изменения</a></li>
+      <li><a href="#ru-13">Контакты</a></li>
+    </ol>
+  </div>
+
+  <h2 id="ru-1"><span class="num">01</span>Принятие</h2>
+  <p>Используя приложение ProgFit («Сервис»), ты подтверждаешь, что прочитал, понял и согласен с этими Условиями использования и нашей <a href="/privacy">Политикой конфиденциальности</a>. Если ты не согласен с этими условиями, пожалуйста, не используй приложение.</p>
+  <p>Для использования Сервиса тебе должно быть <strong>не менее 13 лет</strong>. Пользователям 13-18 лет рекомендуется получить согласие родителей.</p>
+
+  <h2 id="ru-2"><span class="num">02</span>Описание сервиса</h2>
+  <p>ProgFit — это мобильное приложение для отслеживания фитнеса и здоровья. Сервис включает:</p>
+  <ul>
+    <li>Создание и отслеживание программ тренировок</li>
+    <li>Расчёт замеров тела (процент жира, мышечная масса)</li>
+    <li>Отслеживание питания и калорий (функция Pro)</li>
+    <li>Графики прогресса и установка целей (функция Pro)</li>
+    <li>Персонализированные программы от профессиональных тренеров (функция Pro)</li>
+  </ul>
+
+  <h2 id="ru-3"><span class="num">03</span>Ответственность за аккаунт</h2>
+  <p>При создании аккаунта ты соглашаешься предоставлять точную и актуальную информацию. Ты несёшь ответственность за безопасность своего аккаунта и все действия, происходящие под твоим аккаунтом. Если ты используешь Apple Sign-In, тебя защищают меры безопасности Apple.</p>
+  <p>Ты не можешь делиться, продавать или передавать свой аккаунт другим лицам.</p>
+
+  <h2 id="ru-4"><span class="num">04</span>Подписки и оплата</h2>
+  <p>ProgFit предлагает бесплатные базовые функции и премиум-подписку «ProgFit Pro».</p>
+
+  <div class="price-card">
+    <div class="price-row">
+      <div>
+        <div class="price-label">Месячная подписка</div>
+        <div class="price-note">Включая 3 дня бесплатного пробного периода</div>
+      </div>
+      <div class="price-value">$9.99 / мес</div>
+    </div>
+    <div class="price-row">
+      <div>
+        <div class="price-label">Годовая подписка</div>
+        <div class="price-note">Включая 3 дня бесплатно · экономия 58%</div>
+      </div>
+      <div class="price-value">$49.99 / год</div>
+    </div>
+    <div class="price-row">
+      <div>
+        <div class="price-label">Дополнительная программа</div>
+        <div class="price-note">Для тех, кто превысил месячную квоту (разово)</div>
+      </div>
+      <div class="price-value">$2.99</div>
+    </div>
+  </div>
+
+  <p>Цены отображаются в местной валюте твоей страны в App Store. Они конвертируются согласно региональной матрице цен Apple и включают применимые налоги.</p>
+
+  <h2 id="ru-5"><span class="num">05</span>Бесплатный пробный период</h2>
+  <p>Новым пользователям предлагается <strong>3-дневный бесплатный пробный период</strong>. Во время пробного периода у тебя есть полный доступ ко всем функциям Pro.</p>
+  <ul>
+    <li>В конце пробного периода с твоей подписки будет <strong>автоматически списана плата</strong></li>
+    <li>Если хочешь отменить, ты должен отменить подписку <strong>не менее чем за 24 часа</strong> до окончания пробного периода</li>
+    <li>Ты можешь отменить во время пробного периода — Pro доступ останется до окончания пробного периода</li>
+    <li>Только один бесплатный пробный период доступен на один Apple ID</li>
+  </ul>
+
+  <h2 id="ru-6"><span class="num">06</span>Автопродление</h2>
+  <div class="callout">
+    <p><strong>Подписки ProgFit Pro продлеваются автоматически.</strong> Если они не отменены не менее чем за 24 часа до окончания текущего периода подписки, подписка будет автоматически продлена на тот же период и оплачена через метод оплаты, зарегистрированный с твоим Apple ID.</p>
+  </div>
+  <p>Это автопродление:</p>
+  <ul>
+    <li>Происходит в одну и ту же дату каждый месяц для месячных подписок</li>
+    <li>Происходит в одну и ту же дату каждый год для годовых подписок</li>
+    <li>Списывается по текущей цене, отображаемой в App Store</li>
+  </ul>
+
+  <h2 id="ru-7"><span class="num">07</span>Отмена и возврат</h2>
+
+  <h3>Отмена</h3>
+  <p>Ты можешь отменить подписку в любое время:</p>
+  <ul>
+    <li><strong>На iPhone:</strong> Настройки → [Твоё имя] → Подписки → ProgFit → Отменить подписку</li>
+    <li>После отмены доступ к функциям Pro сохранится до окончания текущего расчётного периода</li>
+    <li>Отмена останавливает автопродление</li>
+  </ul>
+
+  <h3>Возврат</h3>
+  <p>Поскольку все покупки обрабатываются через Apple App Store, запросы на возврат подчиняются политике возврата Apple. Для запроса возврата:</p>
+  <ul>
+    <li>Перейди на <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></li>
+    <li>Выбери купленную подписку и нажми «Запросить возврат»</li>
+    <li>Apple оценит твой запрос и обработает соответствующие возвраты в течение 5-7 рабочих дней</li>
+  </ul>
+  <p>ProgFit не может напрямую обрабатывать возвраты за платежи, сделанные через App Store. Все процессы возврата управляются Apple.</p>
+
+  <h2 id="ru-8"><span class="num">08</span>Предупреждение о здоровье</h2>
+  <div class="callout callout-warning">
+    <p><strong>Важно:</strong> ProgFit не является медицинским устройством или платформой медицинских советов. Расчёты процента жира, программы тренировок и рекомендации по питанию предназначены только для информационных целей.</p>
+  </div>
+  <p>Перед началом новой программы тренировок или изменением пищевых привычек <strong>всегда консультируйся с врачом или квалифицированным специалистом по здоровью</strong>. Особенно если:</p>
+  <ul>
+    <li>У тебя есть существующее состояние здоровья</li>
+    <li>У тебя есть хроническое заболевание (диабет, болезни сердца и т. д.)</li>
+    <li>Ты беременна или недавно родила</li>
+    <li>Ты восстанавливаешься после травмы</li>
+  </ul>
+  <p>Здоровье и безопасность должны быть выше рекомендаций ProgFit. ProgFit не несёт ответственности за проблемы со здоровьем, возникшие из-за использования приложения.</p>
+
+  <h2 id="ru-9"><span class="num">09</span>Запрещённые действия</h2>
+  <p>Используя ProgFit, ты соглашаешься не:</p>
+  <ul>
+    <li>Использовать Сервис для незаконных или несанкционированных целей</li>
+    <li>Атаковать, взламывать или применять обратную разработку к инфраструктуре Сервиса</li>
+    <li>Злоупотреблять Сервисом с помощью автоматических средств (ботов)</li>
+    <li>Использовать чужой аккаунт</li>
+    <li>Распространять вирусы, вредоносное ПО или вредоносный контент через Сервис</li>
+    <li>Применять обратную разработку или пытаться извлечь исходный код</li>
+  </ul>
+  <p>Аккаунты, нарушающие эти правила, могут быть закрыты без предварительного уведомления.</p>
+
+  <h2 id="ru-10"><span class="num">10</span>Интеллектуальная собственность</h2>
+  <p>Весь контент, дизайн, код, логотипы и торговые марки приложения ProgFit являются интеллектуальной собственностью ProgFit. Они не могут использоваться в коммерческих целях, копироваться или воспроизводиться.</p>
+  <p>Данные, которые ты создаёшь в Сервисе (история тренировок, замеры и т. д.), принадлежат тебе. Ты можешь скачать или удалить эти данные в любое время.</p>
+
+  <h2 id="ru-11"><span class="num">11</span>Отказ от гарантий</h2>
+  <p>Сервис ProgFit предоставляется «как есть». Не гарантируется, что Сервис будет непрерывным, безошибочным или соответствует всем ожиданиям.</p>
+  <p>В максимально допустимой законом степени, ProgFit не может нести ответственность за:</p>
+  <ul>
+    <li>Косвенные, случайные или последующие убытки</li>
+    <li>Потерю данных, потерю доходов или прерывание бизнеса</li>
+    <li>Ущерб от временных перебоев в работе сервиса</li>
+    <li>Проблемы, возникшие из-за советов по здоровью, фитнесу или питанию</li>
+  </ul>
+
+  <h2 id="ru-12"><span class="num">12</span>Изменения</h2>
+  <p>Мы оставляем за собой право время от времени изменять эти Условия использования. При значительных изменениях мы покажем уведомление в приложении. Продолжение использования Сервиса после изменений означает принятие новых условий.</p>
+
+  <h2 id="ru-13"><span class="num">13</span>Контакты</h2>
+  <p>Если у тебя есть вопросы об этих Условиях использования, свяжись с нами:</p>
+  <p><strong>Email:</strong> <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a><br>
+  <strong>Веб:</strong> <a href="https://progfit.fit">progfit.fit</a></p>
+</main>
+</div>
+
+<footer>
+  <div style="margin-bottom: 16px;">
+    <a href="/terms">Terms of Service</a>
+    <a href="/privacy">Privacy Policy</a>
+    <a href="https://progfit.fit">progfit.fit</a>
+  </div>
+  <div>© 2026 ProgFit. All rights reserved.</div>
+</footer>
+
+<script>
+  // Tarayıcı dilini algıla — kullanıcı kendi dilinde görsün
+  function detectLanguage() {
+    const browserLang = (navigator.language || navigator.userLanguage || 'tr').toLowerCase();
+    if (browserLang.startsWith('en')) return 'en';
+    if (browserLang.startsWith('ru')) return 'ru';
+    return 'tr'; // varsayılan: Türkçe
+  }
+
+  // localStorage'da kullanıcının seçimi varsa onu kullan, yoksa tarayıcı dilini kullan
+  const savedLang = (() => {
+    try { return localStorage.getItem('progfit-policy-lang'); } catch { return null; }
+  })();
+  const initialLang = savedLang || detectLanguage();
+
+  // İlk yüklemede doğru dili aktif et
+  function setLanguage(lang) {
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('progfit-policy-lang', lang); } catch {}
+  }
+  setLanguage(initialLang);
+
+  // Manuel dil değiştirme
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setLanguage(btn.dataset.lang);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
