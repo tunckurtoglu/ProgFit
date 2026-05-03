@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — ProgFit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e1219;
+    --bg-elev: #1a1f2e;
+    --bg-card: #232938;
+    --accent: #a3e635;
+    --accent-dim: rgba(163, 230, 53, 0.12);
+    --text: #f0f3f8;
+    --text-muted: #8a92a3;
+    --text-subtle: #5a6275;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.12);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Geist', -apple-system, sans-serif;
+    line-height: 1.65;
+    font-size: 16px;
+    font-feature-settings: 'cv11', 'ss01';
+    min-height: 100vh;
+  }
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(14, 18, 25, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand {
+    display: flex;
+    align-items: baseline;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+  }
+  .brand-prog { color: var(--text); }
+  .brand-fit { color: var(--accent); font-style: italic; }
+  .lang-switch {
+    display: flex;
+    gap: 4px;
+    background: var(--bg-card);
+    border-radius: 8px;
+    padding: 3px;
+    border: 1px solid var(--border);
+  }
+  .lang-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    padding: 5px 11px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: all 0.15s ease;
+  }
+  .lang-btn:hover { color: var(--text); }
+  .lang-btn.active {
+    background: var(--accent);
+    color: #0e1219;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 32px 120px;
+  }
+  .hero {
+    margin-bottom: 56px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .doc-tag {
+    display: inline-block;
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px;
+    color: var(--accent);
+    background: var(--accent-dim);
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(163, 230, 53, 0.25);
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+  .lede {
+    color: var(--text-muted);
+    font-size: 18px;
+    line-height: 1.65;
+    max-width: 580px;
+  }
+  .meta {
+    margin-top: 24px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-family: 'Geist Mono', monospace;
+    font-size: 13px;
+    color: var(--text-subtle);
+  }
+  .meta strong {
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin: 56px 0 16px;
+    color: var(--text);
+    scroll-margin-top: 80px;
+  }
+  h2 .num {
+    color: var(--text-subtle);
+    font-family: 'Geist Mono', monospace;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 12px;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 28px 0 12px;
+    color: var(--text);
+  }
+  p {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+  p strong, li strong { color: var(--text); font-weight: 600; }
+  ul {
+    list-style: none;
+    margin-bottom: 16px;
+  }
+  ul li {
+    color: var(--text-muted);
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+  }
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(163, 230, 53, 0.3);
+    transition: all 0.15s ease;
+  }
+  a:hover {
+    border-bottom-color: var(--accent);
+  }
+  .callout {
+    background: var(--bg-elev);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 24px 0;
+  }
+  .callout p { margin: 0; color: var(--text); font-size: 15px; }
+  .toc {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 40px 0;
+  }
+  .toc-title {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-subtle);
+    margin-bottom: 14px;
+  }
+  .toc ol {
+    list-style: none;
+    counter-reset: section;
+    column-count: 2;
+    column-gap: 32px;
+  }
+  .toc ol li {
+    counter-increment: section;
+    margin-bottom: 8px;
+    break-inside: avoid;
+  }
+  .toc ol li a {
+    color: var(--text-muted);
+    border-bottom: none;
+    font-size: 14px;
+    display: block;
+  }
+  .toc ol li a:hover { color: var(--accent); }
+  .toc ol li a::before {
+    content: counter(section, decimal-leading-zero) " ";
+    color: var(--text-subtle);
+    font-family: 'Geist Mono', monospace;
+    margin-right: 8px;
+    font-size: 12px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    color: var(--text);
+    font-weight: 600;
+    background: var(--bg-elev);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  td { color: var(--text-muted); }
+  td:first-child { color: var(--text); font-weight: 500; }
+  footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+    border-top: 1px solid var(--border);
+    color: var(--text-subtle);
+    font-size: 13px;
+  }
+  footer a { color: var(--text-muted); border-bottom: none; margin-right: 20px; }
+  footer a:hover { color: var(--accent); }
+  .lang-content { display: none; }
+  .lang-content.active { display: block; }
+  @media (max-width: 640px) {
+    main { padding: 32px 20px 80px; }
+    .nav-inner { padding: 12px 20px; }
+    h1 { font-size: 32px; }
+    .toc ol { column-count: 1; }
+    .meta { gap: 12px; flex-direction: column; }
+    table { font-size: 13px; }
+    th, td { padding: 10px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="https://progfit.fit" class="brand">
+      <span class="brand-prog">Prog</span><span class="brand-fit">Fit</span>
+    </a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="tr">TR</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ru">RU</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     TÜRKÇE
+     ═══════════════════════════════════════════════════════ -->
+<div class="lang-content active" data-lang="tr">
+<main>
+  <div class="hero">
+    <span class="doc-tag">GİZLİLİK POLİTİKASI</span>
+    <h1>Gizliliğine saygımız var.</h1>
+    <p class="lede">ProgFit'i kullanırken hangi verilerini topladığımız, neden topladığımız ve nasıl koruduğumuzu net bir şekilde anlatıyoruz.</p>
+    <div class="meta">
+      <div><strong>Yürürlük tarihi:</strong> 3 Mayıs 2026</div>
+      <div><strong>Sürüm:</strong> 1.0</div>
+    </div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">İçindekiler</div>
+    <ol>
+      <li><a href="#tr-1">Genel Bakış</a></li>
+      <li><a href="#tr-2">Topladığımız Veriler</a></li>
+      <li><a href="#tr-3">Verileri Nasıl Kullanıyoruz</a></li>
+      <li><a href="#tr-4">Üçüncü Taraf Servisler</a></li>
+      <li><a href="#tr-5">Veri Saklama</a></li>
+      <li><a href="#tr-6">Haklarınız</a></li>
+      <li><a href="#tr-7">Çocukların Gizliliği</a></li>
+      <li><a href="#tr-8">Veri Güvenliği</a></li>
+      <li><a href="#tr-9">Politikadaki Değişiklikler</a></li>
+      <li><a href="#tr-10">İletişim</a></li>
+    </ol>
+  </div>
+
+  <h2 id="tr-1"><span class="num">01</span>Genel Bakış</h2>
+  <p>ProgFit ("biz", "uygulama", "hizmet"), kullanıcılarımıza fitness takibi, antrenman programları, beslenme takibi ve vücut ölçüm hesaplama hizmetleri sunan bir mobil uygulamadır. Bu Gizlilik Politikası; ProgFit'i kullanırken hangi kişisel verilerinizi topladığımızı, bu verileri nasıl işlediğimizi ve haklarınızın neler olduğunu açıklar.</p>
+  <p>Bu politika <strong>GDPR</strong> (Avrupa Birliği Genel Veri Koruma Tüzüğü), <strong>KVKK</strong> (Türkiye Kişisel Verilerin Korunması Kanunu) ve <strong>CCPA</strong> (California Tüketici Gizlilik Yasası) gibi uluslararası gizlilik düzenlemeleriyle uyumludur.</p>
+  <div class="callout">
+    <p><strong>Veri Sorumlusu:</strong> ProgFit, şahıs bir uygulama geliştiricisi tarafından yönetilmektedir. İletişim: <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a></p>
+  </div>
+
+  <h2 id="tr-2"><span class="num">02</span>Topladığımız Veriler</h2>
+
+  <h3>Hesap Bilgileri</h3>
+  <ul>
+    <li>E-posta adresi (Apple Sign-In veya e-posta ile kayıt)</li>
+    <li>Ad/kullanıcı adı (isteğe bağlı, profilinizi tamamlamak için)</li>
+  </ul>
+
+  <h3>Profil ve Sağlık Verileri</h3>
+  <ul>
+    <li>Cinsiyet, yaş, boy ve kilo</li>
+    <li>Vücut ölçümleri (bel, boyun, kalça çevresi)</li>
+    <li>Hesaplanan değerler (vücut yağ oranı, kas kütlesi, yağ kütlesi)</li>
+    <li>Antrenman geçmişi ve haftalık ağırlık ilerlemeleri</li>
+    <li>Beslenme verileri (günlük kalori ve makro alımı)</li>
+    <li>Hedef ağırlıklar ve antrenman tercihleri</li>
+  </ul>
+
+  <h3>Abonelik ve Satın Alma Bilgileri</h3>
+  <ul>
+    <li>Abonelik durumu (Pro / Free)</li>
+    <li>Satın alma tarihleri ve abonelik tipi (RevenueCat üzerinden)</li>
+    <li><strong>Ödeme bilgileri ProgFit tarafından <em>asla saklanmaz</em></strong> — tüm ödemeler doğrudan Apple App Store üzerinden işlenir</li>
+  </ul>
+
+  <h3>Teknik Veriler</h3>
+  <ul>
+    <li>Cihaz tipi (iOS sürümü)</li>
+    <li>Uygulama sürümü</li>
+    <li>Anonim kullanım istatistikleri (hangi özellikler kullanılıyor)</li>
+  </ul>
+
+  <h2 id="tr-3"><span class="num">03</span>Verileri Nasıl Kullanıyoruz</h2>
+  <p>Topladığımız verileri yalnızca aşağıdaki amaçlar için kullanırız:</p>
+  <ul>
+    <li><strong>Hizmet sunumu:</strong> Antrenman programlarını oluşturmak, vücut ölçümlerini hesaplamak, ilerlemenizi takip etmek</li>
+    <li><strong>Kişiselleştirme:</strong> Size özel antrenman ve beslenme önerileri sunmak</li>
+    <li><strong>Abonelik yönetimi:</strong> Pro üyeliğinizi doğrulamak ve özelliklere erişimi sağlamak</li>
+    <li><strong>İletişim:</strong> Önemli güncellemeler ve destek talepleri için (yalnızca gerektiğinde)</li>
+    <li><strong>İyileştirme:</strong> Anonim kullanım verileriyle uygulamayı geliştirmek</li>
+  </ul>
+  <p><strong>Verilerinizi asla üçüncü taraflara satmayız veya pazarlama amaçlı kullanmayız.</strong></p>
+
+  <h2 id="tr-4"><span class="num">04</span>Üçüncü Taraf Servisler</h2>
+  <p>ProgFit, aşağıdaki güvenilir hizmet sağlayıcıları kullanır:</p>
+  <table>
+    <thead>
+      <tr><th>Servis</th><th>Amaç</th><th>Veri Türü</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Supabase</td><td>Veritabanı ve kimlik doğrulama</td><td>Tüm kullanıcı verileri</td></tr>
+      <tr><td>RevenueCat</td><td>Abonelik yönetimi</td><td>Abonelik durumu, satın alma geçmişi</td></tr>
+      <tr><td>Apple App Store</td><td>Ödeme işleme</td><td>Ödeme bilgileri (bizimle paylaşılmaz)</td></tr>
+    </tbody>
+  </table>
+  <p>Bu servislerin her biri kendi gizlilik politikalarına sahiptir ve verilerinizi yalnızca size hizmet sunmak için işler.</p>
+
+  <h2 id="tr-5"><span class="num">05</span>Veri Saklama</h2>
+  <p>Verilerinizi yalnızca hizmet sunumu için gereken süre boyunca saklarız:</p>
+  <ul>
+    <li><strong>Aktif hesap:</strong> Hesabınız aktif olduğu sürece</li>
+    <li><strong>Hesap silme talebi:</strong> 30 gün içinde tüm verileriniz silinir</li>
+    <li><strong>Yedeklemeler:</strong> Yasal zorunluluk olmadıkça 90 gün sonra otomatik silinir</li>
+  </ul>
+
+  <h2 id="tr-6"><span class="num">06</span>Haklarınız</h2>
+  <p>GDPR, KVKK ve CCPA çerçevesinde aşağıdaki haklara sahipsiniz:</p>
+  <ul>
+    <li><strong>Erişim hakkı:</strong> Hangi verilerinizi sakladığımızı sorma</li>
+    <li><strong>Düzeltme hakkı:</strong> Yanlış verilerin düzeltilmesini isteme</li>
+    <li><strong>Silme hakkı:</strong> Tüm verilerinizin silinmesini talep etme ("unutulma hakkı")</li>
+    <li><strong>Veri taşınabilirliği:</strong> Verilerinizi makine okunabilir formatta indirme</li>
+    <li><strong>İtiraz hakkı:</strong> Veri işlemeye itiraz etme</li>
+    <li><strong>Şikâyet hakkı:</strong> Veri koruma otoritelerine şikâyette bulunma</li>
+  </ul>
+  <p>Herhangi bir hakkınızı kullanmak için <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a> adresine yazabilirsiniz. Talebinize 30 gün içinde yanıt veririz.</p>
+
+  <h2 id="tr-7"><span class="num">07</span>Çocukların Gizliliği</h2>
+  <p>ProgFit <strong>13 yaş altındaki çocuklara yönelik değildir</strong>. 13 yaşından küçük bir çocuğun verilerini bilerek toplamayız. Eğer bir çocuğun bize bilgi sağladığını fark edersek, bu verileri derhal sileriz.</p>
+
+  <h2 id="tr-8"><span class="num">08</span>Veri Güvenliği</h2>
+  <p>Verilerinizi korumak için endüstri standardı güvenlik önlemleri kullanırız:</p>
+  <ul>
+    <li>Tüm veriler HTTPS/TLS ile şifrelenerek iletilir</li>
+    <li>Veritabanı erişimi yalnızca yetkili sistemler tarafından sağlanır</li>
+    <li>Şifreler bcrypt ile hash'lenir (asla düz metin saklanmaz)</li>
+    <li>Düzenli güvenlik güncellemeleri uygulanır</li>
+  </ul>
+  <p>Hiçbir sistem %100 güvenli değildir, ancak verilerinizi korumak için elimizden geleni yaparız.</p>
+
+  <h2 id="tr-9"><span class="num">09</span>Politikadaki Değişiklikler</h2>
+  <p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler olduğunda uygulama içinde bildirim göndereceğiz veya kayıtlı e-posta adresinize bilgilendirme yapacağız. Politikanın yürürlük tarihi en üstte gösterilir.</p>
+
+  <h2 id="tr-10"><span class="num">10</span>İletişim</h2>
+  <p>Gizlilik politikamızla ilgili herhangi bir soru veya talep için bize ulaşabilirsiniz:</p>
+  <p><strong>E-posta:</strong> <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a><br>
+  <strong>Web:</strong> <a href="https://progfit.fit">progfit.fit</a></p>
+</main>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     ENGLISH
+     ═══════════════════════════════════════════════════════ -->
+<div class="lang-content" data-lang="en">
+<main>
+  <div class="hero">
+    <span class="doc-tag">PRIVACY POLICY</span>
+    <h1>We respect your privacy.</h1>
+    <p class="lede">A clear explanation of what data we collect when you use ProgFit, why we collect it, and how we protect it.</p>
+    <div class="meta">
+      <div><strong>Effective date:</strong> May 3, 2026</div>
+      <div><strong>Version:</strong> 1.0</div>
+    </div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#en-1">Overview</a></li>
+      <li><a href="#en-2">Data We Collect</a></li>
+      <li><a href="#en-3">How We Use Data</a></li>
+      <li><a href="#en-4">Third-Party Services</a></li>
+      <li><a href="#en-5">Data Retention</a></li>
+      <li><a href="#en-6">Your Rights</a></li>
+      <li><a href="#en-7">Children's Privacy</a></li>
+      <li><a href="#en-8">Data Security</a></li>
+      <li><a href="#en-9">Policy Changes</a></li>
+      <li><a href="#en-10">Contact</a></li>
+    </ol>
+  </div>
+
+  <h2 id="en-1"><span class="num">01</span>Overview</h2>
+  <p>ProgFit ("we", "the app", "the service") is a mobile application that provides fitness tracking, training programs, nutrition tracking, and body measurement calculation services to its users. This Privacy Policy explains what personal data we collect when you use ProgFit, how we process this data, and what your rights are.</p>
+  <p>This policy complies with international privacy regulations including <strong>GDPR</strong> (EU General Data Protection Regulation), <strong>KVKK</strong> (Turkey Personal Data Protection Law), and <strong>CCPA</strong> (California Consumer Privacy Act).</p>
+  <div class="callout">
+    <p><strong>Data Controller:</strong> ProgFit is operated by an individual app developer. Contact: <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a></p>
+  </div>
+
+  <h2 id="en-2"><span class="num">02</span>Data We Collect</h2>
+
+  <h3>Account Information</h3>
+  <ul>
+    <li>Email address (via Apple Sign-In or email registration)</li>
+    <li>Name/username (optional, to complete your profile)</li>
+  </ul>
+
+  <h3>Profile and Health Data</h3>
+  <ul>
+    <li>Gender, age, height, and weight</li>
+    <li>Body measurements (waist, neck, hip circumference)</li>
+    <li>Calculated values (body fat percentage, muscle mass, fat mass)</li>
+    <li>Workout history and weekly weight progressions</li>
+    <li>Nutrition data (daily calorie and macro intake)</li>
+    <li>Goal weights and training preferences</li>
+  </ul>
+
+  <h3>Subscription and Purchase Information</h3>
+  <ul>
+    <li>Subscription status (Pro / Free)</li>
+    <li>Purchase dates and subscription type (via RevenueCat)</li>
+    <li><strong>Payment information is <em>never stored</em> by ProgFit</strong> — all payments are processed directly through Apple App Store</li>
+  </ul>
+
+  <h3>Technical Data</h3>
+  <ul>
+    <li>Device type (iOS version)</li>
+    <li>App version</li>
+    <li>Anonymous usage statistics (which features are used)</li>
+  </ul>
+
+  <h2 id="en-3"><span class="num">03</span>How We Use Data</h2>
+  <p>We only use the data we collect for the following purposes:</p>
+  <ul>
+    <li><strong>Service delivery:</strong> Creating training programs, calculating body measurements, tracking your progress</li>
+    <li><strong>Personalization:</strong> Providing custom training and nutrition recommendations</li>
+    <li><strong>Subscription management:</strong> Verifying your Pro membership and providing access to features</li>
+    <li><strong>Communication:</strong> For important updates and support requests (only when necessary)</li>
+    <li><strong>Improvement:</strong> Improving the app with anonymous usage data</li>
+  </ul>
+  <p><strong>We never sell your data to third parties or use it for marketing purposes.</strong></p>
+
+  <h2 id="en-4"><span class="num">04</span>Third-Party Services</h2>
+  <p>ProgFit uses the following trusted service providers:</p>
+  <table>
+    <thead>
+      <tr><th>Service</th><th>Purpose</th><th>Data Type</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Supabase</td><td>Database and authentication</td><td>All user data</td></tr>
+      <tr><td>RevenueCat</td><td>Subscription management</td><td>Subscription status, purchase history</td></tr>
+      <tr><td>Apple App Store</td><td>Payment processing</td><td>Payment info (not shared with us)</td></tr>
+    </tbody>
+  </table>
+  <p>Each of these services has its own privacy policy and processes your data only to provide services to you.</p>
+
+  <h2 id="en-5"><span class="num">05</span>Data Retention</h2>
+  <p>We retain your data only for as long as necessary to provide our services:</p>
+  <ul>
+    <li><strong>Active account:</strong> As long as your account is active</li>
+    <li><strong>Account deletion request:</strong> All your data is deleted within 30 days</li>
+    <li><strong>Backups:</strong> Automatically deleted after 90 days unless legally required</li>
+  </ul>
+
+  <h2 id="en-6"><span class="num">06</span>Your Rights</h2>
+  <p>Under GDPR, KVKK, and CCPA, you have the following rights:</p>
+  <ul>
+    <li><strong>Right of access:</strong> Ask what data we hold about you</li>
+    <li><strong>Right to rectification:</strong> Request correction of inaccurate data</li>
+    <li><strong>Right to erasure:</strong> Request deletion of all your data ("right to be forgotten")</li>
+    <li><strong>Data portability:</strong> Download your data in machine-readable format</li>
+    <li><strong>Right to object:</strong> Object to data processing</li>
+    <li><strong>Right to complain:</strong> File a complaint with data protection authorities</li>
+  </ul>
+  <p>To exercise any of your rights, you can email <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a>. We respond to your request within 30 days.</p>
+
+  <h2 id="en-7"><span class="num">07</span>Children's Privacy</h2>
+  <p>ProgFit is <strong>not intended for children under 13 years of age</strong>. We do not knowingly collect data from children under 13. If we become aware that a child has provided us with information, we will delete this data immediately.</p>
+
+  <h2 id="en-8"><span class="num">08</span>Data Security</h2>
+  <p>We use industry-standard security measures to protect your data:</p>
+  <ul>
+    <li>All data is transmitted encrypted via HTTPS/TLS</li>
+    <li>Database access is provided only by authorized systems</li>
+    <li>Passwords are hashed with bcrypt (never stored in plain text)</li>
+    <li>Regular security updates are applied</li>
+  </ul>
+  <p>No system is 100% secure, but we do everything we can to protect your data.</p>
+
+  <h2 id="en-9"><span class="num">09</span>Policy Changes</h2>
+  <p>This Privacy Policy may be updated from time to time. When significant changes occur, we will send notifications within the app or notify your registered email address. The effective date of the policy is shown at the top.</p>
+
+  <h2 id="en-10"><span class="num">10</span>Contact</h2>
+  <p>For any questions or requests about our privacy policy, you can reach us at:</p>
+  <p><strong>Email:</strong> <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a><br>
+  <strong>Web:</strong> <a href="https://progfit.fit">progfit.fit</a></p>
+</main>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     RUSSIAN
+     ═══════════════════════════════════════════════════════ -->
+<div class="lang-content" data-lang="ru">
+<main>
+  <div class="hero">
+    <span class="doc-tag">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</span>
+    <h1>Мы уважаем твою конфиденциальность.</h1>
+    <p class="lede">Чёткое объяснение того, какие данные мы собираем при использовании ProgFit, зачем мы их собираем и как защищаем.</p>
+    <div class="meta">
+      <div><strong>Дата вступления в силу:</strong> 3 мая 2026</div>
+      <div><strong>Версия:</strong> 1.0</div>
+    </div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Содержание</div>
+    <ol>
+      <li><a href="#ru-1">Обзор</a></li>
+      <li><a href="#ru-2">Собираемые данные</a></li>
+      <li><a href="#ru-3">Использование данных</a></li>
+      <li><a href="#ru-4">Сторонние сервисы</a></li>
+      <li><a href="#ru-5">Хранение данных</a></li>
+      <li><a href="#ru-6">Ваши права</a></li>
+      <li><a href="#ru-7">Дети</a></li>
+      <li><a href="#ru-8">Безопасность</a></li>
+      <li><a href="#ru-9">Изменения</a></li>
+      <li><a href="#ru-10">Контакты</a></li>
+    </ol>
+  </div>
+
+  <h2 id="ru-1"><span class="num">01</span>Обзор</h2>
+  <p>ProgFit («мы», «приложение», «сервис») — это мобильное приложение, предоставляющее своим пользователям услуги отслеживания фитнеса, программы тренировок, отслеживание питания и расчёт замеров тела. Эта Политика конфиденциальности объясняет, какие персональные данные мы собираем при использовании ProgFit, как мы обрабатываем эти данные и каковы ваши права.</p>
+  <p>Эта политика соответствует международным правилам конфиденциальности, включая <strong>GDPR</strong> (Общий регламент ЕС по защите данных), <strong>KVKK</strong> (Закон Турции о защите персональных данных) и <strong>CCPA</strong> (Закон Калифорнии о конфиденциальности потребителей).</p>
+  <div class="callout">
+    <p><strong>Контролёр данных:</strong> ProgFit управляется индивидуальным разработчиком приложений. Контакт: <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a></p>
+  </div>
+
+  <h2 id="ru-2"><span class="num">02</span>Собираемые данные</h2>
+
+  <h3>Информация об аккаунте</h3>
+  <ul>
+    <li>Адрес электронной почты (через Apple Sign-In или регистрацию по email)</li>
+    <li>Имя/имя пользователя (необязательно, для заполнения профиля)</li>
+  </ul>
+
+  <h3>Профиль и данные о здоровье</h3>
+  <ul>
+    <li>Пол, возраст, рост и вес</li>
+    <li>Замеры тела (обхват талии, шеи, бёдер)</li>
+    <li>Расчётные значения (процент жира, мышечная масса, жировая масса)</li>
+    <li>История тренировок и еженедельный прогресс по весам</li>
+    <li>Данные о питании (ежедневное потребление калорий и макронутриентов)</li>
+    <li>Целевой вес и предпочтения по тренировкам</li>
+  </ul>
+
+  <h3>Информация о подписке и покупках</h3>
+  <ul>
+    <li>Статус подписки (Pro / Free)</li>
+    <li>Даты покупок и тип подписки (через RevenueCat)</li>
+    <li><strong>Платёжная информация <em>никогда не хранится</em> ProgFit</strong> — все платежи обрабатываются напрямую через Apple App Store</li>
+  </ul>
+
+  <h3>Технические данные</h3>
+  <ul>
+    <li>Тип устройства (версия iOS)</li>
+    <li>Версия приложения</li>
+    <li>Анонимная статистика использования (какие функции используются)</li>
+  </ul>
+
+  <h2 id="ru-3"><span class="num">03</span>Использование данных</h2>
+  <p>Мы используем собираемые данные только для следующих целей:</p>
+  <ul>
+    <li><strong>Предоставление услуг:</strong> Создание программ тренировок, расчёт замеров тела, отслеживание прогресса</li>
+    <li><strong>Персонализация:</strong> Предоставление индивидуальных рекомендаций по тренировкам и питанию</li>
+    <li><strong>Управление подпиской:</strong> Проверка вашего членства Pro и предоставление доступа к функциям</li>
+    <li><strong>Связь:</strong> Для важных обновлений и запросов поддержки (только при необходимости)</li>
+    <li><strong>Улучшение:</strong> Улучшение приложения с помощью анонимных данных об использовании</li>
+  </ul>
+  <p><strong>Мы никогда не продаём ваши данные третьим лицам и не используем их в маркетинговых целях.</strong></p>
+
+  <h2 id="ru-4"><span class="num">04</span>Сторонние сервисы</h2>
+  <p>ProgFit использует следующих надёжных поставщиков услуг:</p>
+  <table>
+    <thead>
+      <tr><th>Сервис</th><th>Назначение</th><th>Тип данных</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Supabase</td><td>База данных и аутентификация</td><td>Все пользовательские данные</td></tr>
+      <tr><td>RevenueCat</td><td>Управление подписками</td><td>Статус подписки, история покупок</td></tr>
+      <tr><td>Apple App Store</td><td>Обработка платежей</td><td>Платёжная информация (не передаётся нам)</td></tr>
+    </tbody>
+  </table>
+  <p>Каждый из этих сервисов имеет собственную политику конфиденциальности и обрабатывает ваши данные только для предоставления вам услуг.</p>
+
+  <h2 id="ru-5"><span class="num">05</span>Хранение данных</h2>
+  <p>Мы храним ваши данные только в течение времени, необходимого для предоставления наших услуг:</p>
+  <ul>
+    <li><strong>Активный аккаунт:</strong> Пока ваш аккаунт активен</li>
+    <li><strong>Запрос на удаление аккаунта:</strong> Все ваши данные удаляются в течение 30 дней</li>
+    <li><strong>Резервные копии:</strong> Автоматически удаляются через 90 дней, если иное не требуется по закону</li>
+  </ul>
+
+  <h2 id="ru-6"><span class="num">06</span>Ваши права</h2>
+  <p>В соответствии с GDPR, KVKK и CCPA у вас есть следующие права:</p>
+  <ul>
+    <li><strong>Право доступа:</strong> Узнать, какие данные мы храним о вас</li>
+    <li><strong>Право на исправление:</strong> Запросить исправление неточных данных</li>
+    <li><strong>Право на удаление:</strong> Запросить удаление всех ваших данных («право быть забытым»)</li>
+    <li><strong>Переносимость данных:</strong> Скачать свои данные в машиночитаемом формате</li>
+    <li><strong>Право на возражение:</strong> Возразить против обработки данных</li>
+    <li><strong>Право на жалобу:</strong> Подать жалобу в органы защиты данных</li>
+  </ul>
+  <p>Чтобы воспользоваться любым из ваших прав, напишите на <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a>. Мы отвечаем на ваш запрос в течение 30 дней.</p>
+
+  <h2 id="ru-7"><span class="num">07</span>Конфиденциальность детей</h2>
+  <p>ProgFit <strong>не предназначен для детей младше 13 лет</strong>. Мы сознательно не собираем данные о детях младше 13 лет. Если мы узнаем, что ребёнок предоставил нам информацию, мы немедленно удалим эти данные.</p>
+
+  <h2 id="ru-8"><span class="num">08</span>Безопасность данных</h2>
+  <p>Для защиты ваших данных мы используем меры безопасности отраслевого стандарта:</p>
+  <ul>
+    <li>Все данные передаются в зашифрованном виде по HTTPS/TLS</li>
+    <li>Доступ к базе данных предоставляется только авторизованным системам</li>
+    <li>Пароли хешируются с помощью bcrypt (никогда не хранятся в виде открытого текста)</li>
+    <li>Применяются регулярные обновления безопасности</li>
+  </ul>
+  <p>Ни одна система не является на 100% безопасной, но мы делаем всё возможное для защиты ваших данных.</p>
+
+  <h2 id="ru-9"><span class="num">09</span>Изменения политики</h2>
+  <p>Эта Политика конфиденциальности может время от времени обновляться. При значительных изменениях мы отправим уведомления в приложении или сообщим на ваш зарегистрированный адрес электронной почты. Дата вступления политики в силу указана сверху.</p>
+
+  <h2 id="ru-10"><span class="num">10</span>Контакты</h2>
+  <p>По любым вопросам или запросам о нашей политике конфиденциальности вы можете связаться с нами:</p>
+  <p><strong>Email:</strong> <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a><br>
+  <strong>Веб:</strong> <a href="https://progfit.fit">progfit.fit</a></p>
+</main>
+</div>
+
+<footer>
+  <div style="margin-bottom: 16px;">
+    <a href="/terms">Terms of Service</a>
+    <a href="/privacy">Privacy Policy</a>
+    <a href="https://progfit.fit">progfit.fit</a>
+  </div>
+  <div>© 2026 ProgFit. All rights reserved.</div>
+</footer>
+
+<script>
+  // Tarayıcı dilini algıla — kullanıcı kendi dilinde görsün
+  function detectLanguage() {
+    const browserLang = (navigator.language || navigator.userLanguage || 'tr').toLowerCase();
+    if (browserLang.startsWith('en')) return 'en';
+    if (browserLang.startsWith('ru')) return 'ru';
+    return 'tr'; // varsayılan: Türkçe
+  }
+
+  // localStorage'da kullanıcının seçimi varsa onu kullan, yoksa tarayıcı dilini kullan
+  const savedLang = (() => {
+    try { return localStorage.getItem('progfit-policy-lang'); } catch { return null; }
+  })();
+  const initialLang = savedLang || detectLanguage();
+
+  // İlk yüklemede doğru dili aktif et
+  function setLanguage(lang) {
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('progfit-policy-lang', lang); } catch {}
+  }
+  setLanguage(initialLang);
+
+  // Manuel dil değiştirme
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setLanguage(btn.dataset.lang);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
