@@ -197,6 +197,10 @@
     margin: 24px 0;
   }
   .callout p { margin: 0; color: var(--text); font-size: 15px; }
+  .callout-warning {
+    background: rgba(248, 113, 113, 0.06);
+    border-left-color: #f87171;
+  }
   .toc {
     background: var(--bg-elev);
     border: 1px solid var(--border);
@@ -309,10 +313,10 @@
   <div class="hero">
     <span class="doc-tag">GİZLİLİK POLİTİKASI</span>
     <h1>Gizliliğine saygımız var.</h1>
-    <p class="lede">ProgFit'i kullanırken hangi verilerini topladığımız, neden topladığımız ve nasıl koruduğumuzu net bir şekilde anlatıyoruz.</p>
+    <p class="lede">ProgFit'i kullanırken hangi verilerini topladığımızı, neden topladığımızı ve nasıl koruduğumuzu açıkça anlatıyoruz.</p>
     <div class="meta">
-      <div><strong>Yürürlük tarihi:</strong> 3 Mayıs 2026</div>
-      <div><strong>Sürüm:</strong> 1.0</div>
+      <div><strong>Yürürlük tarihi:</strong> 10 Ekim 2026</div>
+      <div><strong>Sürüm:</strong> 2.0</div>
     </div>
   </div>
 
@@ -322,118 +326,160 @@
       <li><a href="#tr-1">Genel Bakış</a></li>
       <li><a href="#tr-2">Topladığımız Veriler</a></li>
       <li><a href="#tr-3">Verileri Nasıl Kullanıyoruz</a></li>
-      <li><a href="#tr-4">Üçüncü Taraf Servisler</a></li>
-      <li><a href="#tr-5">Veri Saklama</a></li>
-      <li><a href="#tr-6">Haklarınız</a></li>
-      <li><a href="#tr-7">Çocukların Gizliliği</a></li>
-      <li><a href="#tr-8">Veri Güvenliği</a></li>
-      <li><a href="#tr-9">Politikadaki Değişiklikler</a></li>
-      <li><a href="#tr-10">İletişim</a></li>
+      <li><a href="#tr-4">Yapay Zekâ Koçu (Proggy)</a></li>
+      <li><a href="#tr-5">Üçüncü Taraf Servisler</a></li>
+      <li><a href="#tr-6">Veri Saklama ve Silme</a></li>
+      <li><a href="#tr-7">Hakların</a></li>
+      <li><a href="#tr-8">Çocukların Gizliliği</a></li>
+      <li><a href="#tr-9">Veri Güvenliği</a></li>
+      <li><a href="#tr-10">Politikadaki Değişiklikler</a></li>
+      <li><a href="#tr-11">İletişim</a></li>
     </ol>
   </div>
 
   <h2 id="tr-1"><span class="num">01</span>Genel Bakış</h2>
-  <p>ProgFit ("biz", "uygulama", "hizmet"), kullanıcılarımıza fitness takibi, antrenman programları, beslenme takibi ve vücut ölçüm hesaplama hizmetleri sunan bir mobil uygulamadır. Bu Gizlilik Politikası; ProgFit'i kullanırken hangi kişisel verilerinizi topladığımızı, bu verileri nasıl işlediğimizi ve haklarınızın neler olduğunu açıklar.</p>
+  <p>ProgFit ("biz", "uygulama", "hizmet"); antrenman programı, gelişim takibi, beslenme takibi, vücut ölçümü hesaplamaları ve yapay zekâ koçu sunan bir mobil uygulamadır (iOS ve Android). Bu Gizlilik Politikası; ProgFit'i kullanırken hangi kişisel verilerini topladığımızı, bu verileri nasıl işlediğimizi ve hangi haklara sahip olduğunu açıklar.</p>
   <p>Bu politika <strong>GDPR</strong> (Avrupa Birliği Genel Veri Koruma Tüzüğü), <strong>KVKK</strong> (Türkiye Kişisel Verilerin Korunması Kanunu) ve <strong>CCPA</strong> (California Tüketici Gizlilik Yasası) gibi uluslararası gizlilik düzenlemeleriyle uyumludur.</p>
   <div class="callout">
-    <p><strong>Veri Sorumlusu:</strong> ProgFit, şahıs bir uygulama geliştiricisi tarafından yönetilmektedir. İletişim: <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a></p>
+    <p><strong>Veri Sorumlusu:</strong> ProgFit, bireysel bir uygulama geliştiricisi tarafından işletilmektedir. İletişim: <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a></p>
   </div>
 
   <h2 id="tr-2"><span class="num">02</span>Topladığımız Veriler</h2>
 
   <h3>Hesap Bilgileri</h3>
   <ul>
-    <li>E-posta adresi (Apple Sign-In veya e-posta ile kayıt)</li>
-    <li>Ad/kullanıcı adı (isteğe bağlı, profilinizi tamamlamak için)</li>
+    <li>E-posta ile kayıt olursan e-posta adresin ve şifren (şifre yalnızca güvenli bir özet/hash olarak saklanır)</li>
+    <li>Apple veya Google ile giriş yaparsan bu sağlayıcıdan gelen e-posta adresi (ya da Apple'ın gizli yönlendirme adresi) ve hesap kimliği</li>
+    <li>Adın (isteğe bağlı)</li>
   </ul>
 
-  <h3>Profil ve Sağlık Verileri</h3>
+  <h3>Profil, Antrenman ve Beslenme Verileri</h3>
   <ul>
-    <li>Cinsiyet, yaş, boy ve kilo</li>
-    <li>Vücut ölçümleri (bel, boyun, kalça çevresi)</li>
-    <li>Hesaplanan değerler (vücut yağ oranı, kas kütlesi, yağ kütlesi)</li>
-    <li>Antrenman geçmişi ve haftalık ağırlık ilerlemeleri</li>
-    <li>Beslenme verileri (günlük kalori ve makro alımı)</li>
-    <li>Hedef ağırlıklar ve antrenman tercihleri</li>
+    <li>Cinsiyet, yaş, boy, kilo, hedef ve haftalık antrenman günü sayısı</li>
+    <li>Vücut ölçümleri (boyun, bel, kalça) ve hesaplanan değerler (vücut yağ oranı, kas kütlesi)</li>
+    <li>Antrenman programın; girdiğin ağırlıklar, tekrarlar ve setler; tamamlanan antrenmanlar (süre, toplam hacim, kişisel rekorlar) ve notların</li>
+    <li>Kilo kayıtların</li>
+    <li>Girdiğin besinler, öğünler, favoriler ve su tüketimi</li>
+  </ul>
+
+  <h3>İlerleme Fotoğrafları</h3>
+  <ul>
+    <li>Kameradan veya galeriden eklemeyi seçtiğin fotoğraflar. Yalnızca senin hesabının erişebildiği özel bir depoda saklanır; üçüncü taraflarla paylaşılmaz ve yapay zekâ koçuna gönderilmez.</li>
+  </ul>
+
+  <h3>Apple Sağlık (isteğe bağlı, yalnızca iOS)</h3>
+  <ul>
+    <li>Bu özelliği açarsan ProgFit, Apple Sağlık'taki en güncel kilonu okur; tamamladığın kuvvet antrenmanlarını ve uygulamada girdiğin kiloyu Apple Sağlık'a kaydeder.</li>
+    <li>Apple Sağlık'tan gelen veriler yalnızca ProgFit'teki fitness özelliklerini sunmak için kullanılır. Reklam için kullanılmaz, satılmaz ve veri simsarlarıyla paylaşılmaz.</li>
+  </ul>
+
+  <h3>Proggy (Yapay Zekâ Koçu)</h3>
+  <ul>
+    <li>Proggy'ye gönderdiğin sorular ve aldığın yanıtlar (ayrıntılar 04. bölümde)</li>
+  </ul>
+
+  <h3>Mesajlar ve Talepler</h3>
+  <ul>
+    <li>Koçluk raporu talepleri (formda girdiğin ölçüler ve tercihler)</li>
+    <li>Bize gönderdiğin geri bildirim ve destek mesajları</li>
+    <li>Davet ettiğin arkadaşlarının e-posta adresleri (yalnızca daveti göndermek için kullanılır)</li>
   </ul>
 
   <h3>Abonelik ve Satın Alma Bilgileri</h3>
   <ul>
-    <li>Abonelik durumu (Pro / Free)</li>
-    <li>Satın alma tarihleri ve abonelik tipi (RevenueCat üzerinden)</li>
-    <li><strong>Ödeme bilgileri ProgFit tarafından <em>asla saklanmaz</em></strong> — tüm ödemeler doğrudan Apple App Store üzerinden işlenir</li>
+    <li>Abonelik durumu ve türü, satın alma ve yenileme tarihleri (RevenueCat üzerinden)</li>
+    <li><strong>Ödeme bilgilerin ProgFit tarafından <em>asla görülmez ve saklanmaz</em></strong>; ödemeler Apple App Store veya Google Play tarafından işlenir</li>
+    <li>iOS'ta, hangi reklam kampanyalarının indirme ve aboneliğe dönüştüğünü görebilmemiz için Apple Search Ads ilişkilendirme bilgisi (kişisel tanımlayıcı içermez)</li>
   </ul>
 
-  <h3>Teknik Veriler</h3>
+  <h3>Teknik ve Kullanım Verileri</h3>
   <ul>
-    <li>Cihaz tipi (iOS sürümü)</li>
-    <li>Uygulama sürümü</li>
-    <li>Anonim kullanım istatistikleri (hangi özellikler kullanılıyor)</li>
+    <li>Cihaz platformu (iOS/Android), uygulama sürümü ve güncelleme kimliği</li>
+    <li>Uygulama içi kullanım olayları (örneğin hangi ekran ve özelliklerin kullanıldığı) ve hata raporları; sorunları çözebilmek için hesabınla ilişkilendirilir</li>
+    <li>Reklam kimliği (IDFA) kullanmayız ve seni başka şirketlerin uygulama veya web sitelerinde takip etmeyiz.</li>
   </ul>
 
   <h2 id="tr-3"><span class="num">03</span>Verileri Nasıl Kullanıyoruz</h2>
-  <p>Topladığımız verileri yalnızca aşağıdaki amaçlar için kullanırız:</p>
+  <p>Topladığımız verileri yalnızca şu amaçlarla kullanırız:</p>
   <ul>
-    <li><strong>Hizmet sunumu:</strong> Antrenman programlarını oluşturmak, vücut ölçümlerini hesaplamak, ilerlemenizi takip etmek</li>
-    <li><strong>Kişiselleştirme:</strong> Size özel antrenman ve beslenme önerileri sunmak</li>
-    <li><strong>Abonelik yönetimi:</strong> Pro üyeliğinizi doğrulamak ve özelliklere erişimi sağlamak</li>
-    <li><strong>İletişim:</strong> Önemli güncellemeler ve destek talepleri için (yalnızca gerektiğinde)</li>
-    <li><strong>İyileştirme:</strong> Anonim kullanım verileriyle uygulamayı geliştirmek</li>
+    <li><strong>Hizmet sunumu:</strong> Programını oluşturmak, ölçümleri ve kalori hedefini hesaplamak, gelişimini takip etmek, kayıtlarını saklamak</li>
+    <li><strong>Kişiselleştirme:</strong> Önerileri, uyarlanan kalori hedefini ve Proggy yanıtlarını sana göre hazırlamak</li>
+    <li><strong>Abonelik yönetimi:</strong> Pro üyeliğini doğrulamak ve özelliklere erişim sağlamak</li>
+    <li><strong>İletişim:</strong> Koçluk raporunu e-postayla göndermek, gönderdiğin davetleri iletmek ve geri bildirimlerine yanıt vermek</li>
+    <li><strong>Hatırlatmalar:</strong> Antrenman hatırlatmaları ve günlük ipuçları cihazında yerel bildirim olarak planlanır; Ayarlar'dan kapatabilirsin</li>
+    <li><strong>İyileştirme ve güvenilirlik:</strong> Kullanım olayları ve hata raporlarıyla uygulamayı geliştirmek ve hataları gidermek</li>
   </ul>
-  <p><strong>Verilerinizi asla üçüncü taraflara satmayız veya pazarlama amaçlı kullanmayız.</strong></p>
+  <p><strong>Verilerini asla satmayız ve reklam amacıyla kullanmayız.</strong></p>
 
-  <h2 id="tr-4"><span class="num">04</span>Üçüncü Taraf Servisler</h2>
-  <p>ProgFit, aşağıdaki güvenilir hizmet sağlayıcıları kullanır:</p>
+  <h2 id="tr-4"><span class="num">04</span>Yapay Zekâ Koçu (Proggy)</h2>
+  <p>Proggy, Google'ın Gemini API'si ile çalışır. Proggy'ye mesaj gönderdiğinde sunucumuz Google'a şunları iletir:</p>
+  <ul>
+    <li>Mesajın ve aynı sohbetteki önceki mesajlar</li>
+    <li>Yanıtların sana özel olması için ProgFit verilerinin bir özeti: cinsiyet, yaş, boy, kilo, hedef ve antrenman günleri; son vücut yağ ölçümün; son 90 günün kilo kayıtları (Apple Sağlık'tan aktarılan kilo dahil); son 5 haftanın antrenmanları, programın ve girdiğin ağırlıklar; son 14 günün günlük kalori ve protein toplamları</li>
+  </ul>
+  <p>Adın, e-posta adresin ve ilerleme fotoğrafların asla gönderilmez. Sohbetlerini sunucularımızda saklamayız; yalnızca planındaki günlük soru sınırı için kaç soru sorduğunu sayarız. Google bu verileri yanıtı oluşturmak için Gemini API koşulları çerçevesinde işler. Proggy yalnızca sen ona mesaj gönderdiğinde çalışır.</p>
+  <div class="callout callout-warning">
+    <p><strong>Not:</strong> Proggy'nin yanıtları yapay zekâ tarafından üretilir ve hatalı olabilir. Tıbbi tavsiye değildir.</p>
+  </div>
+
+  <h2 id="tr-5"><span class="num">05</span>Üçüncü Taraf Servisler</h2>
+  <p>ProgFit aşağıdaki hizmet sağlayıcıları kullanır:</p>
   <table>
     <thead>
       <tr><th>Servis</th><th>Amaç</th><th>Veri Türü</th></tr>
     </thead>
     <tbody>
-      <tr><td>Supabase</td><td>Veritabanı ve kimlik doğrulama</td><td>Tüm kullanıcı verileri</td></tr>
-      <tr><td>RevenueCat</td><td>Abonelik yönetimi</td><td>Abonelik durumu, satın alma geçmişi</td></tr>
-      <tr><td>Apple App Store</td><td>Ödeme işleme</td><td>Ödeme bilgileri (bizimle paylaşılmaz)</td></tr>
+      <tr><td>Supabase</td><td>Veritabanı, giriş ve özel fotoğraf deposu</td><td>Tüm hesap ve uygulama verileri</td></tr>
+      <tr><td>RevenueCat</td><td>Abonelik yönetimi</td><td>Hesap kimliği, e-posta, abonelik ve satın alma geçmişi</td></tr>
+      <tr><td>Apple</td><td>App Store ödemeleri, Apple ile Giriş, Apple Sağlık, Search Ads ilişkilendirmesi</td><td>Ödeme bilgileri (bizimle paylaşılmaz), giriş kimliği, izin verdiğin sağlık verileri</td></tr>
+      <tr><td>Google</td><td>Google Play ödemeleri, Google ile giriş, Gemini API (Proggy)</td><td>Ödeme bilgileri (bizimle paylaşılmaz), giriş kimliği, Proggy'ye gönderilen veriler (04. bölüm)</td></tr>
+      <tr><td>Open Food Facts</td><td>Barkoddan besin arama</td><td>Yalnızca okutulan barkod numarası</td></tr>
+      <tr><td>Resend</td><td>E-posta gönderimi</td><td>E-posta adresin ve e-postanın içeriği (raporlar, davetler, geri bildirim yanıtları)</td></tr>
+      <tr><td>Expo</td><td>Uygulama güncellemelerinin dağıtımı</td><td>Cihaz türü ve uygulama sürümü</td></tr>
     </tbody>
   </table>
-  <p>Bu servislerin her biri kendi gizlilik politikalarına sahiptir ve verilerinizi yalnızca size hizmet sunmak için işler.</p>
+  <p>Bu servislerin her biri yalnızca bize hizmet sunmak için veri işler ve kendi gizlilik politikasına sahiptir.</p>
 
-  <h2 id="tr-5"><span class="num">05</span>Veri Saklama</h2>
-  <p>Verilerinizi yalnızca hizmet sunumu için gereken süre boyunca saklarız:</p>
+  <h2 id="tr-6"><span class="num">06</span>Veri Saklama ve Silme</h2>
+  <p>Verilerini yalnızca hizmeti sunmak için gereken süre boyunca saklarız:</p>
   <ul>
-    <li><strong>Aktif hesap:</strong> Hesabınız aktif olduğu sürece</li>
-    <li><strong>Hesap silme talebi:</strong> 30 gün içinde tüm verileriniz silinir</li>
-    <li><strong>Yedeklemeler:</strong> Yasal zorunluluk olmadıkça 90 gün sonra otomatik silinir</li>
+    <li><strong>Aktif hesap:</strong> Hesabın var olduğu sürece</li>
+    <li><strong>Hesap silme:</strong> Hesabını uygulamadan istediğin an silebilirsin (Ayarlar → Hesabı Sil). Hesabın, tüm verilerin ve ilerleme fotoğrafların veritabanımızdan hemen silinir. Şifreli yedeklerdeki kopyalar 30 gün içinde kaldırılır.</li>
+    <li><strong>Abonelik:</strong> Hesabını silmek App Store veya Google Play aboneliğini iptal etmez; aboneliği mağaza ayarlarından iptal etmelisin.</li>
+    <li><strong>E-postalar:</strong> Bize gönderdiğin geri bildirimler yalnızca sana yanıt vermek için gerektiği kadar saklanır.</li>
   </ul>
 
-  <h2 id="tr-6"><span class="num">06</span>Haklarınız</h2>
-  <p>GDPR, KVKK ve CCPA çerçevesinde aşağıdaki haklara sahipsiniz:</p>
+  <h2 id="tr-7"><span class="num">07</span>Hakların</h2>
+  <p>GDPR, KVKK ve CCPA kapsamında şu haklara sahipsin:</p>
   <ul>
-    <li><strong>Erişim hakkı:</strong> Hangi verilerinizi sakladığımızı sorma</li>
+    <li><strong>Erişim hakkı:</strong> Hakkında hangi verileri sakladığımızı öğrenme</li>
     <li><strong>Düzeltme hakkı:</strong> Yanlış verilerin düzeltilmesini isteme</li>
-    <li><strong>Silme hakkı:</strong> Tüm verilerinizin silinmesini talep etme ("unutulma hakkı")</li>
-    <li><strong>Veri taşınabilirliği:</strong> Verilerinizi makine okunabilir formatta indirme</li>
+    <li><strong>Silme hakkı:</strong> Tüm verilerinin silinmesini isteme ("unutulma hakkı"); bunu uygulamadan kendin de yapabilirsin</li>
+    <li><strong>Veri taşınabilirliği:</strong> Verilerinin makine tarafından okunabilir bir kopyasını isteme</li>
     <li><strong>İtiraz hakkı:</strong> Veri işlemeye itiraz etme</li>
-    <li><strong>Şikâyet hakkı:</strong> Veri koruma otoritelerine şikâyette bulunma</li>
+    <li><strong>Şikâyet hakkı:</strong> Veri koruma otoritesine şikâyette bulunma</li>
   </ul>
-  <p>Herhangi bir hakkınızı kullanmak için <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a> adresine yazabilirsiniz. Talebinize 30 gün içinde yanıt veririz.</p>
+  <p>Haklarını kullanmak için <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a> adresine yazabilirsin. Talebine 30 gün içinde yanıt veririz.</p>
 
-  <h2 id="tr-7"><span class="num">07</span>Çocukların Gizliliği</h2>
-  <p>ProgFit <strong>13 yaş altındaki çocuklara yönelik değildir</strong>. 13 yaşından küçük bir çocuğun verilerini bilerek toplamayız. Eğer bir çocuğun bize bilgi sağladığını fark edersek, bu verileri derhal sileriz.</p>
+  <h2 id="tr-8"><span class="num">08</span>Çocukların Gizliliği</h2>
+  <p>ProgFit <strong>13 yaşından küçük çocuklara yönelik değildir</strong>. 13 yaşından küçük çocuklardan bilerek veri toplamayız. Bir çocuğun bize veri sağladığını fark edersek bu verileri derhal sileriz.</p>
 
-  <h2 id="tr-8"><span class="num">08</span>Veri Güvenliği</h2>
-  <p>Verilerinizi korumak için endüstri standardı güvenlik önlemleri kullanırız:</p>
+  <h2 id="tr-9"><span class="num">09</span>Veri Güvenliği</h2>
+  <p>Verilerini korumak için sektör standardı güvenlik önlemleri kullanırız:</p>
   <ul>
     <li>Tüm veriler HTTPS/TLS ile şifrelenerek iletilir</li>
-    <li>Veritabanı erişimi yalnızca yetkili sistemler tarafından sağlanır</li>
-    <li>Şifreler bcrypt ile hash'lenir (asla düz metin saklanmaz)</li>
+    <li>Her kullanıcı yalnızca kendi verilerine erişebilir (satır düzeyinde güvenlik)</li>
+    <li>İlerleme fotoğrafları özel bir depoda tutulur ve yalnızca kısa süreli imzalı bağlantılarla gösterilir</li>
+    <li>Şifreler güvenli bir şekilde hash'lenir, asla düz metin olarak saklanmaz</li>
     <li>Düzenli güvenlik güncellemeleri uygulanır</li>
   </ul>
-  <p>Hiçbir sistem %100 güvenli değildir, ancak verilerinizi korumak için elimizden geleni yaparız.</p>
+  <p>Hiçbir sistem %100 güvenli değildir, ancak verilerini korumak için elimizden geleni yaparız.</p>
 
-  <h2 id="tr-9"><span class="num">09</span>Politikadaki Değişiklikler</h2>
-  <p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler olduğunda uygulama içinde bildirim göndereceğiz veya kayıtlı e-posta adresinize bilgilendirme yapacağız. Politikanın yürürlük tarihi en üstte gösterilir.</p>
+  <h2 id="tr-10"><span class="num">10</span>Politikadaki Değişiklikler</h2>
+  <p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişikliklerde uygulama içinde bildirim gösterir veya kayıtlı e-posta adresine bilgi veririz. Politikanın yürürlük tarihi sayfanın en üstünde yer alır.</p>
 
-  <h2 id="tr-10"><span class="num">10</span>İletişim</h2>
-  <p>Gizlilik politikamızla ilgili herhangi bir soru veya talep için bize ulaşabilirsiniz:</p>
+  <h2 id="tr-11"><span class="num">11</span>İletişim</h2>
+  <p>Gizlilik politikamızla ilgili soru ve talepler için bize ulaşabilirsin:</p>
   <p><strong>E-posta:</strong> <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a><br>
   <strong>Web:</strong> <a href="https://progfit.fit">progfit.fit</a></p>
 </main>
@@ -449,8 +495,8 @@
     <h1>We respect your privacy.</h1>
     <p class="lede">A clear explanation of what data we collect when you use ProgFit, why we collect it, and how we protect it.</p>
     <div class="meta">
-      <div><strong>Effective date:</strong> May 3, 2026</div>
-      <div><strong>Version:</strong> 1.0</div>
+      <div><strong>Effective date:</strong> October 10, 2026</div>
+      <div><strong>Version:</strong> 2.0</div>
     </div>
   </div>
 
@@ -460,18 +506,19 @@
       <li><a href="#en-1">Overview</a></li>
       <li><a href="#en-2">Data We Collect</a></li>
       <li><a href="#en-3">How We Use Data</a></li>
-      <li><a href="#en-4">Third-Party Services</a></li>
-      <li><a href="#en-5">Data Retention</a></li>
-      <li><a href="#en-6">Your Rights</a></li>
-      <li><a href="#en-7">Children's Privacy</a></li>
-      <li><a href="#en-8">Data Security</a></li>
-      <li><a href="#en-9">Policy Changes</a></li>
-      <li><a href="#en-10">Contact</a></li>
+      <li><a href="#en-4">AI Coach (Proggy)</a></li>
+      <li><a href="#en-5">Third-Party Services</a></li>
+      <li><a href="#en-6">Data Retention and Deletion</a></li>
+      <li><a href="#en-7">Your Rights</a></li>
+      <li><a href="#en-8">Children's Privacy</a></li>
+      <li><a href="#en-9">Data Security</a></li>
+      <li><a href="#en-10">Policy Changes</a></li>
+      <li><a href="#en-11">Contact</a></li>
     </ol>
   </div>
 
   <h2 id="en-1"><span class="num">01</span>Overview</h2>
-  <p>ProgFit ("we", "the app", "the service") is a mobile application that provides fitness tracking, training programs, nutrition tracking, and body measurement calculation services to its users. This Privacy Policy explains what personal data we collect when you use ProgFit, how we process this data, and what your rights are.</p>
+  <p>ProgFit ("we", "the app", "the service") is a mobile application (iOS and Android) that provides workout programs, progress tracking, nutrition tracking, body measurement calculations and an AI coach. This Privacy Policy explains what personal data we collect when you use ProgFit, how we process it, and what your rights are.</p>
   <p>This policy complies with international privacy regulations including <strong>GDPR</strong> (EU General Data Protection Regulation), <strong>KVKK</strong> (Turkey Personal Data Protection Law), and <strong>CCPA</strong> (California Consumer Privacy Act).</p>
   <div class="callout">
     <p><strong>Data Controller:</strong> ProgFit is operated by an individual app developer. Contact: <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a></p>
@@ -481,96 +528,137 @@
 
   <h3>Account Information</h3>
   <ul>
-    <li>Email address (via Apple Sign-In or email registration)</li>
-    <li>Name/username (optional, to complete your profile)</li>
+    <li>If you sign up with email: your email address and password (the password is stored only as a secure hash)</li>
+    <li>If you sign in with Apple or Google: the email address (or Apple's private relay address) and an account identifier from that provider</li>
+    <li>Your name (optional)</li>
   </ul>
 
-  <h3>Profile and Health Data</h3>
+  <h3>Profile, Training and Nutrition Data</h3>
   <ul>
-    <li>Gender, age, height, and weight</li>
-    <li>Body measurements (waist, neck, hip circumference)</li>
-    <li>Calculated values (body fat percentage, muscle mass, fat mass)</li>
-    <li>Workout history and weekly weight progressions</li>
-    <li>Nutrition data (daily calorie and macro intake)</li>
-    <li>Goal weights and training preferences</li>
+    <li>Gender, age, height, weight, goal and training days per week</li>
+    <li>Body measurements (neck, waist, hip) and calculated values (body-fat percentage, muscle mass)</li>
+    <li>Your workout program; the weights, reps and sets you log; completed workouts (duration, total volume, personal records) and your notes</li>
+    <li>Your weight entries</li>
+    <li>Foods, meals, favorites and water you log</li>
+  </ul>
+
+  <h3>Progress Photos</h3>
+  <ul>
+    <li>Photos you choose to add from your camera or photo library. They are stored in private storage that only your account can access, are never shared with third parties, and are never sent to the AI coach.</li>
+  </ul>
+
+  <h3>Apple Health (optional, iOS only)</h3>
+  <ul>
+    <li>If you turn this on, ProgFit reads your most recent body weight from Apple Health and saves your completed strength workouts and the weight you log in the app to Apple Health.</li>
+    <li>Data from Apple Health is used only to provide fitness features in ProgFit. It is never used for advertising, never sold, and never shared with data brokers.</li>
+  </ul>
+
+  <h3>Proggy (AI Coach)</h3>
+  <ul>
+    <li>Questions you send to Proggy and its answers (details in section 04)</li>
+  </ul>
+
+  <h3>Messages and Requests</h3>
+  <ul>
+    <li>Coaching report requests (the measurements and preferences you enter in the form)</li>
+    <li>Feedback and support messages you send us</li>
+    <li>Email addresses of friends you invite (used only to send the invitation)</li>
   </ul>
 
   <h3>Subscription and Purchase Information</h3>
   <ul>
-    <li>Subscription status (Pro / Free)</li>
-    <li>Purchase dates and subscription type (via RevenueCat)</li>
-    <li><strong>Payment information is <em>never stored</em> by ProgFit</strong> — all payments are processed directly through Apple App Store</li>
+    <li>Subscription status and type, purchase and renewal dates (via RevenueCat)</li>
+    <li><strong>Payment details are <em>never seen or stored</em> by ProgFit</strong>; payments are processed by the Apple App Store or Google Play</li>
+    <li>On iOS, Apple Search Ads attribution data so we can see which ad campaigns lead to installs and subscriptions (contains no personal identifier)</li>
   </ul>
 
-  <h3>Technical Data</h3>
+  <h3>Technical and Usage Data</h3>
   <ul>
-    <li>Device type (iOS version)</li>
-    <li>App version</li>
-    <li>Anonymous usage statistics (which features are used)</li>
+    <li>Device platform (iOS/Android), app version and update ID</li>
+    <li>In-app usage events (for example, which screens and features are used) and error reports, linked to your account so we can fix problems</li>
+    <li>We do not use the advertising identifier (IDFA) and we do not track you across other companies' apps or websites.</li>
   </ul>
 
   <h2 id="en-3"><span class="num">03</span>How We Use Data</h2>
   <p>We only use the data we collect for the following purposes:</p>
   <ul>
-    <li><strong>Service delivery:</strong> Creating training programs, calculating body measurements, tracking your progress</li>
-    <li><strong>Personalization:</strong> Providing custom training and nutrition recommendations</li>
+    <li><strong>Service delivery:</strong> Building your program, calculating measurements and calorie targets, tracking your progress, and saving your logs</li>
+    <li><strong>Personalization:</strong> Tailoring recommendations, your adaptive calorie target and Proggy's answers to you</li>
     <li><strong>Subscription management:</strong> Verifying your Pro membership and providing access to features</li>
-    <li><strong>Communication:</strong> For important updates and support requests (only when necessary)</li>
-    <li><strong>Improvement:</strong> Improving the app with anonymous usage data</li>
+    <li><strong>Communication:</strong> Emailing your coaching report, delivering invitations you send, and replying to your feedback</li>
+    <li><strong>Reminders:</strong> Workout reminders and daily tips are scheduled on your device as local notifications; you can turn them off in Settings</li>
+    <li><strong>Improvement and reliability:</strong> Using usage events and error reports to improve the app and fix bugs</li>
   </ul>
-  <p><strong>We never sell your data to third parties or use it for marketing purposes.</strong></p>
+  <p><strong>We never sell your data and we do not use it for advertising.</strong></p>
 
-  <h2 id="en-4"><span class="num">04</span>Third-Party Services</h2>
-  <p>ProgFit uses the following trusted service providers:</p>
+  <h2 id="en-4"><span class="num">04</span>AI Coach (Proggy)</h2>
+  <p>Proggy is powered by Google's Gemini API. When you send Proggy a message, our server sends Google:</p>
+  <ul>
+    <li>Your message and the earlier messages in the same conversation</li>
+    <li>A summary of your ProgFit data so answers can be personal: gender, age, height, weight, goal and training days; your latest body-fat measurement; weight entries from the last 90 days (including weight imported from Apple Health); workouts from the last 5 weeks, your program and logged lifts; daily calorie and protein totals from the last 14 days</li>
+  </ul>
+  <p>Your name, email address and progress photos are never sent. We do not store your conversations on our servers; we only count how many questions you ask each day for your plan's limit. Google processes this data to generate the answer under the Gemini API terms. Proggy only runs when you choose to message it.</p>
+  <div class="callout callout-warning">
+    <p><strong>Note:</strong> Proggy's answers are generated by AI and may be inaccurate. They are not medical advice.</p>
+  </div>
+
+  <h2 id="en-5"><span class="num">05</span>Third-Party Services</h2>
+  <p>ProgFit uses the following service providers:</p>
   <table>
     <thead>
       <tr><th>Service</th><th>Purpose</th><th>Data Type</th></tr>
     </thead>
     <tbody>
-      <tr><td>Supabase</td><td>Database and authentication</td><td>All user data</td></tr>
-      <tr><td>RevenueCat</td><td>Subscription management</td><td>Subscription status, purchase history</td></tr>
-      <tr><td>Apple App Store</td><td>Payment processing</td><td>Payment info (not shared with us)</td></tr>
+      <tr><td>Supabase</td><td>Database, sign-in and private photo storage</td><td>All account and app data</td></tr>
+      <tr><td>RevenueCat</td><td>Subscription management</td><td>Account ID, email, subscription and purchase history</td></tr>
+      <tr><td>Apple</td><td>App Store payments, Sign in with Apple, Apple Health, Search Ads attribution</td><td>Payment info (not shared with us), sign-in identifier, health data you allow</td></tr>
+      <tr><td>Google</td><td>Google Play payments, Google sign-in, Gemini API (Proggy)</td><td>Payment info (not shared with us), sign-in identifier, data sent to Proggy (section 04)</td></tr>
+      <tr><td>Open Food Facts</td><td>Food lookup by barcode</td><td>Only the scanned barcode number</td></tr>
+      <tr><td>Resend</td><td>Email delivery</td><td>Your email address and the email content (reports, invitations, feedback replies)</td></tr>
+      <tr><td>Expo</td><td>App update delivery</td><td>Device type and app version</td></tr>
     </tbody>
   </table>
-  <p>Each of these services has its own privacy policy and processes your data only to provide services to you.</p>
+  <p>Each of these services processes data only to provide its service to us and has its own privacy policy.</p>
 
-  <h2 id="en-5"><span class="num">05</span>Data Retention</h2>
-  <p>We retain your data only for as long as necessary to provide our services:</p>
+  <h2 id="en-6"><span class="num">06</span>Data Retention and Deletion</h2>
+  <p>We keep your data only as long as needed to provide the service:</p>
   <ul>
-    <li><strong>Active account:</strong> As long as your account is active</li>
-    <li><strong>Account deletion request:</strong> All your data is deleted within 30 days</li>
-    <li><strong>Backups:</strong> Automatically deleted after 90 days unless legally required</li>
+    <li><strong>Active account:</strong> As long as your account exists</li>
+    <li><strong>Account deletion:</strong> You can delete your account in the app at any time (Settings → Delete Account). Your account, all your data and your progress photos are deleted from our database immediately. Copies in encrypted backups are removed within 30 days.</li>
+    <li><strong>Subscriptions:</strong> Deleting your account does not cancel an App Store or Google Play subscription; cancel it in your store settings.</li>
+    <li><strong>Emails:</strong> Feedback you send us is kept only as long as needed to reply to you.</li>
   </ul>
 
-  <h2 id="en-6"><span class="num">06</span>Your Rights</h2>
-  <p>Under GDPR, KVKK, and CCPA, you have the following rights:</p>
+  <h2 id="en-7"><span class="num">07</span>Your Rights</h2>
+  <p>Under GDPR, KVKK and CCPA, you have the following rights:</p>
   <ul>
     <li><strong>Right of access:</strong> Ask what data we hold about you</li>
     <li><strong>Right to rectification:</strong> Request correction of inaccurate data</li>
-    <li><strong>Right to erasure:</strong> Request deletion of all your data ("right to be forgotten")</li>
-    <li><strong>Data portability:</strong> Download your data in machine-readable format</li>
+    <li><strong>Right to erasure:</strong> Request deletion of all your data ("right to be forgotten"); you can also do this yourself in the app</li>
+    <li><strong>Data portability:</strong> Request a machine-readable copy of your data</li>
     <li><strong>Right to object:</strong> Object to data processing</li>
-    <li><strong>Right to complain:</strong> File a complaint with data protection authorities</li>
+    <li><strong>Right to complain:</strong> File a complaint with a data protection authority</li>
   </ul>
-  <p>To exercise any of your rights, you can email <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a>. We respond to your request within 30 days.</p>
+  <p>To exercise any of your rights, email <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a>. We respond within 30 days.</p>
 
-  <h2 id="en-7"><span class="num">07</span>Children's Privacy</h2>
-  <p>ProgFit is <strong>not intended for children under 13 years of age</strong>. We do not knowingly collect data from children under 13. If we become aware that a child has provided us with information, we will delete this data immediately.</p>
+  <h2 id="en-8"><span class="num">08</span>Children's Privacy</h2>
+  <p>ProgFit is <strong>not intended for children under 13</strong>. We do not knowingly collect data from children under 13. If we learn that a child has provided us with data, we will delete it immediately.</p>
 
-  <h2 id="en-8"><span class="num">08</span>Data Security</h2>
+  <h2 id="en-9"><span class="num">09</span>Data Security</h2>
   <p>We use industry-standard security measures to protect your data:</p>
   <ul>
     <li>All data is transmitted encrypted via HTTPS/TLS</li>
-    <li>Database access is provided only by authorized systems</li>
-    <li>Passwords are hashed with bcrypt (never stored in plain text)</li>
+    <li>Each user can access only their own data (row-level security)</li>
+    <li>Progress photos are kept in private storage and shown only through short-lived signed links</li>
+    <li>Passwords are securely hashed and never stored in plain text</li>
     <li>Regular security updates are applied</li>
   </ul>
   <p>No system is 100% secure, but we do everything we can to protect your data.</p>
 
-  <h2 id="en-9"><span class="num">09</span>Policy Changes</h2>
-  <p>This Privacy Policy may be updated from time to time. When significant changes occur, we will send notifications within the app or notify your registered email address. The effective date of the policy is shown at the top.</p>
+  <h2 id="en-10"><span class="num">10</span>Policy Changes</h2>
+  <p>This Privacy Policy may be updated from time to time. When significant changes occur, we will show a notice in the app or email your registered address. The effective date is shown at the top of this page.</p>
 
-  <h2 id="en-10"><span class="num">10</span>Contact</h2>
+  <h2 id="en-11"><span class="num">11</span>Contact</h2>
   <p>For any questions or requests about our privacy policy, you can reach us at:</p>
   <p><strong>Email:</strong> <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a><br>
   <strong>Web:</strong> <a href="https://progfit.fit">progfit.fit</a></p>
@@ -585,10 +673,10 @@
   <div class="hero">
     <span class="doc-tag">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</span>
     <h1>Мы уважаем твою конфиденциальность.</h1>
-    <p class="lede">Чёткое объяснение того, какие данные мы собираем при использовании ProgFit, зачем мы их собираем и как защищаем.</p>
+    <p class="lede">Понятное объяснение того, какие данные мы собираем, когда ты пользуешься ProgFit, зачем мы их собираем и как защищаем.</p>
     <div class="meta">
-      <div><strong>Дата вступления в силу:</strong> 3 мая 2026</div>
-      <div><strong>Версия:</strong> 1.0</div>
+      <div><strong>Дата вступления в силу:</strong> 10 октября 2026 г.</div>
+      <div><strong>Версия:</strong> 2.0</div>
     </div>
   </div>
 
@@ -596,122 +684,164 @@
     <div class="toc-title">Содержание</div>
     <ol>
       <li><a href="#ru-1">Обзор</a></li>
-      <li><a href="#ru-2">Собираемые данные</a></li>
-      <li><a href="#ru-3">Использование данных</a></li>
-      <li><a href="#ru-4">Сторонние сервисы</a></li>
-      <li><a href="#ru-5">Хранение данных</a></li>
-      <li><a href="#ru-6">Ваши права</a></li>
-      <li><a href="#ru-7">Дети</a></li>
-      <li><a href="#ru-8">Безопасность</a></li>
-      <li><a href="#ru-9">Изменения</a></li>
-      <li><a href="#ru-10">Контакты</a></li>
+      <li><a href="#ru-2">Какие данные мы собираем</a></li>
+      <li><a href="#ru-3">Как мы используем данные</a></li>
+      <li><a href="#ru-4">ИИ-коуч (Прогги)</a></li>
+      <li><a href="#ru-5">Сторонние сервисы</a></li>
+      <li><a href="#ru-6">Хранение и удаление данных</a></li>
+      <li><a href="#ru-7">Твои права</a></li>
+      <li><a href="#ru-8">Конфиденциальность детей</a></li>
+      <li><a href="#ru-9">Безопасность данных</a></li>
+      <li><a href="#ru-10">Изменения политики</a></li>
+      <li><a href="#ru-11">Контакты</a></li>
     </ol>
   </div>
 
   <h2 id="ru-1"><span class="num">01</span>Обзор</h2>
-  <p>ProgFit («мы», «приложение», «сервис») — это мобильное приложение, предоставляющее своим пользователям услуги отслеживания фитнеса, программы тренировок, отслеживание питания и расчёт замеров тела. Эта Политика конфиденциальности объясняет, какие персональные данные мы собираем при использовании ProgFit, как мы обрабатываем эти данные и каковы ваши права.</p>
-  <p>Эта политика соответствует международным правилам конфиденциальности, включая <strong>GDPR</strong> (Общий регламент ЕС по защите данных), <strong>KVKK</strong> (Закон Турции о защите персональных данных) и <strong>CCPA</strong> (Закон Калифорнии о конфиденциальности потребителей).</p>
+  <p>ProgFit («мы», «приложение», «сервис») — мобильное приложение (iOS и Android) с программами тренировок, отслеживанием прогресса и питания, расчётом параметров тела и ИИ-коучем. Эта Политика конфиденциальности объясняет, какие персональные данные мы собираем, когда ты пользуешься ProgFit, как мы их обрабатываем и какие у тебя есть права.</p>
+  <p>Политика соответствует международным нормам защиты данных, включая <strong>GDPR</strong> (Общий регламент ЕС по защите данных), <strong>KVKK</strong> (Закон Турции о защите персональных данных) и <strong>CCPA</strong> (Закон Калифорнии о защите прав потребителей).</p>
   <div class="callout">
-    <p><strong>Контролёр данных:</strong> ProgFit управляется индивидуальным разработчиком приложений. Контакт: <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a></p>
+    <p><strong>Оператор данных:</strong> ProgFit управляется частным разработчиком. Контакт: <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a></p>
   </div>
 
-  <h2 id="ru-2"><span class="num">02</span>Собираемые данные</h2>
+  <h2 id="ru-2"><span class="num">02</span>Какие данные мы собираем</h2>
 
-  <h3>Информация об аккаунте</h3>
+  <h3>Данные аккаунта</h3>
   <ul>
-    <li>Адрес электронной почты (через Apple Sign-In или регистрацию по email)</li>
-    <li>Имя/имя пользователя (необязательно, для заполнения профиля)</li>
+    <li>При регистрации по email: адрес электронной почты и пароль (пароль хранится только в виде защищённого хеша)</li>
+    <li>При входе через Apple или Google: email (или скрытый адрес Apple) и идентификатор аккаунта этого сервиса</li>
+    <li>Имя (по желанию)</li>
   </ul>
 
-  <h3>Профиль и данные о здоровье</h3>
+  <h3>Профиль, тренировки и питание</h3>
   <ul>
-    <li>Пол, возраст, рост и вес</li>
-    <li>Замеры тела (обхват талии, шеи, бёдер)</li>
-    <li>Расчётные значения (процент жира, мышечная масса, жировая масса)</li>
-    <li>История тренировок и еженедельный прогресс по весам</li>
-    <li>Данные о питании (ежедневное потребление калорий и макронутриентов)</li>
-    <li>Целевой вес и предпочтения по тренировкам</li>
+    <li>Пол, возраст, рост, вес, цель и количество тренировочных дней в неделю</li>
+    <li>Замеры тела (шея, талия, бёдра) и рассчитанные значения (процент жира, мышечная масса)</li>
+    <li>Твоя программа тренировок; веса, повторения и подходы, которые ты записываешь; завершённые тренировки (длительность, общий объём, личные рекорды) и заметки</li>
+    <li>Записи веса</li>
+    <li>Продукты, приёмы пищи, избранное и выпитая вода</li>
   </ul>
 
-  <h3>Информация о подписке и покупках</h3>
+  <h3>Фото прогресса</h3>
   <ul>
-    <li>Статус подписки (Pro / Free)</li>
-    <li>Даты покупок и тип подписки (через RevenueCat)</li>
-    <li><strong>Платёжная информация <em>никогда не хранится</em> ProgFit</strong> — все платежи обрабатываются напрямую через Apple App Store</li>
+    <li>Фото, которые ты сам добавляешь с камеры или из галереи. Они хранятся в закрытом хранилище, доступном только твоему аккаунту, не передаются третьим лицам и никогда не отправляются ИИ-коучу.</li>
   </ul>
 
-  <h3>Технические данные</h3>
+  <h3>Apple Health (по желанию, только iOS)</h3>
   <ul>
-    <li>Тип устройства (версия iOS)</li>
-    <li>Версия приложения</li>
-    <li>Анонимная статистика использования (какие функции используются)</li>
+    <li>Если ты включишь эту функцию, ProgFit будет считывать твой последний вес из Apple Health и сохранять туда завершённые силовые тренировки и вес, который ты записываешь в приложении.</li>
+    <li>Данные из Apple Health используются только для фитнес-функций ProgFit. Они никогда не используются для рекламы, не продаются и не передаются брокерам данных.</li>
   </ul>
 
-  <h2 id="ru-3"><span class="num">03</span>Использование данных</h2>
-  <p>Мы используем собираемые данные только для следующих целей:</p>
+  <h3>Прогги (ИИ-коуч)</h3>
   <ul>
-    <li><strong>Предоставление услуг:</strong> Создание программ тренировок, расчёт замеров тела, отслеживание прогресса</li>
-    <li><strong>Персонализация:</strong> Предоставление индивидуальных рекомендаций по тренировкам и питанию</li>
-    <li><strong>Управление подпиской:</strong> Проверка вашего членства Pro и предоставление доступа к функциям</li>
-    <li><strong>Связь:</strong> Для важных обновлений и запросов поддержки (только при необходимости)</li>
-    <li><strong>Улучшение:</strong> Улучшение приложения с помощью анонимных данных об использовании</li>
+    <li>Вопросы, которые ты отправляешь Прогги, и его ответы (подробнее в разделе 04)</li>
   </ul>
-  <p><strong>Мы никогда не продаём ваши данные третьим лицам и не используем их в маркетинговых целях.</strong></p>
 
-  <h2 id="ru-4"><span class="num">04</span>Сторонние сервисы</h2>
-  <p>ProgFit использует следующих надёжных поставщиков услуг:</p>
+  <h3>Сообщения и запросы</h3>
+  <ul>
+    <li>Запросы на коучинговый отчёт (замеры и предпочтения, которые ты указываешь в форме)</li>
+    <li>Отзывы и обращения в поддержку</li>
+    <li>Email друзей, которых ты приглашаешь (используется только для отправки приглашения)</li>
+  </ul>
+
+  <h3>Подписка и покупки</h3>
+  <ul>
+    <li>Статус и тип подписки, даты покупки и продления (через RevenueCat)</li>
+    <li><strong>ProgFit <em>никогда не видит и не хранит</em> платёжные данные</strong>: платежи обрабатывают Apple App Store или Google Play</li>
+    <li>На iOS — данные атрибуции Apple Search Ads, чтобы понимать, какие рекламные кампании приводят к установкам и подпискам (без персональных идентификаторов)</li>
+  </ul>
+
+  <h3>Технические данные и данные об использовании</h3>
+  <ul>
+    <li>Платформа устройства (iOS/Android), версия приложения и идентификатор обновления</li>
+    <li>События использования в приложении (например, какие экраны и функции открываются) и отчёты об ошибках; они связаны с твоим аккаунтом, чтобы мы могли исправлять проблемы</li>
+    <li>Мы не используем рекламный идентификатор (IDFA) и не отслеживаем тебя в приложениях и на сайтах других компаний.</li>
+  </ul>
+
+  <h2 id="ru-3"><span class="num">03</span>Как мы используем данные</h2>
+  <p>Мы используем собранные данные только для следующих целей:</p>
+  <ul>
+    <li><strong>Работа сервиса:</strong> Составление программы, расчёт замеров и нормы калорий, отслеживание прогресса и сохранение твоих записей</li>
+    <li><strong>Персонализация:</strong> Подбор рекомендаций, адаптивной нормы калорий и ответов Прогги под тебя</li>
+    <li><strong>Управление подпиской:</strong> Проверка Pro-подписки и доступ к функциям</li>
+    <li><strong>Связь:</strong> Отправка коучингового отчёта на email, доставка твоих приглашений и ответы на отзывы</li>
+    <li><strong>Напоминания:</strong> Напоминания о тренировках и ежедневные советы планируются на устройстве как локальные уведомления; их можно отключить в настройках</li>
+    <li><strong>Улучшение и надёжность:</strong> Улучшение приложения и исправление ошибок на основе событий использования и отчётов об ошибках</li>
+  </ul>
+  <p><strong>Мы никогда не продаём твои данные и не используем их для рекламы.</strong></p>
+
+  <h2 id="ru-4"><span class="num">04</span>ИИ-коуч (Прогги)</h2>
+  <p>Прогги работает на Gemini API от Google. Когда ты пишешь Прогги, наш сервер передаёт Google:</p>
+  <ul>
+    <li>Твоё сообщение и предыдущие сообщения в этом же диалоге</li>
+    <li>Сводку твоих данных в ProgFit, чтобы ответы были персональными: пол, возраст, рост, вес, цель и тренировочные дни; последний замер процента жира; записи веса за последние 90 дней (включая вес из Apple Health); тренировки за последние 5 недель, твою программу и рабочие веса; суммы калорий и белка по дням за последние 14 дней</li>
+  </ul>
+  <p>Твоё имя, email и фото прогресса никогда не передаются. Мы не храним твои диалоги на наших серверах — только считаем количество вопросов в день для лимита твоего плана. Google обрабатывает эти данные для формирования ответа в соответствии с условиями Gemini API. Прогги работает только тогда, когда ты сам ему пишешь.</p>
+  <div class="callout callout-warning">
+    <p><strong>Важно:</strong> ответы Прогги генерируются ИИ и могут быть неточными. Это не медицинская консультация.</p>
+  </div>
+
+  <h2 id="ru-5"><span class="num">05</span>Сторонние сервисы</h2>
+  <p>ProgFit пользуется услугами следующих поставщиков:</p>
   <table>
     <thead>
       <tr><th>Сервис</th><th>Назначение</th><th>Тип данных</th></tr>
     </thead>
     <tbody>
-      <tr><td>Supabase</td><td>База данных и аутентификация</td><td>Все пользовательские данные</td></tr>
-      <tr><td>RevenueCat</td><td>Управление подписками</td><td>Статус подписки, история покупок</td></tr>
-      <tr><td>Apple App Store</td><td>Обработка платежей</td><td>Платёжная информация (не передаётся нам)</td></tr>
+      <tr><td>Supabase</td><td>База данных, вход и закрытое хранилище фото</td><td>Все данные аккаунта и приложения</td></tr>
+      <tr><td>RevenueCat</td><td>Управление подписками</td><td>ID аккаунта, email, история подписок и покупок</td></tr>
+      <tr><td>Apple</td><td>Платежи App Store, вход через Apple, Apple Health, атрибуция Search Ads</td><td>Платёжные данные (нам не передаются), идентификатор входа, разрешённые тобой данные о здоровье</td></tr>
+      <tr><td>Google</td><td>Платежи Google Play, вход через Google, Gemini API (Прогги)</td><td>Платёжные данные (нам не передаются), идентификатор входа, данные для Прогги (раздел 04)</td></tr>
+      <tr><td>Open Food Facts</td><td>Поиск продуктов по штрихкоду</td><td>Только номер отсканированного штрихкода</td></tr>
+      <tr><td>Resend</td><td>Отправка email</td><td>Твой email и содержание письма (отчёты, приглашения, ответы на отзывы)</td></tr>
+      <tr><td>Expo</td><td>Доставка обновлений приложения</td><td>Тип устройства и версия приложения</td></tr>
     </tbody>
   </table>
-  <p>Каждый из этих сервисов имеет собственную политику конфиденциальности и обрабатывает ваши данные только для предоставления вам услуг.</p>
+  <p>Каждый из этих сервисов обрабатывает данные только для оказания нам своих услуг и имеет собственную политику конфиденциальности.</p>
 
-  <h2 id="ru-5"><span class="num">05</span>Хранение данных</h2>
-  <p>Мы храним ваши данные только в течение времени, необходимого для предоставления наших услуг:</p>
+  <h2 id="ru-6"><span class="num">06</span>Хранение и удаление данных</h2>
+  <p>Мы храним твои данные только столько, сколько нужно для работы сервиса:</p>
   <ul>
-    <li><strong>Активный аккаунт:</strong> Пока ваш аккаунт активен</li>
-    <li><strong>Запрос на удаление аккаунта:</strong> Все ваши данные удаляются в течение 30 дней</li>
-    <li><strong>Резервные копии:</strong> Автоматически удаляются через 90 дней, если иное не требуется по закону</li>
+    <li><strong>Активный аккаунт:</strong> Пока существует твой аккаунт</li>
+    <li><strong>Удаление аккаунта:</strong> Ты можешь удалить аккаунт в приложении в любой момент (Настройки → Удалить аккаунт). Аккаунт, все данные и фото прогресса сразу удаляются из нашей базы данных. Копии в зашифрованных резервных копиях удаляются в течение 30 дней.</li>
+    <li><strong>Подписка:</strong> Удаление аккаунта не отменяет подписку в App Store или Google Play — отмени её в настройках магазина.</li>
+    <li><strong>Письма:</strong> Отзывы, которые ты нам отправляешь, хранятся только столько, сколько нужно для ответа.</li>
   </ul>
 
-  <h2 id="ru-6"><span class="num">06</span>Ваши права</h2>
-  <p>В соответствии с GDPR, KVKK и CCPA у вас есть следующие права:</p>
+  <h2 id="ru-7"><span class="num">07</span>Твои права</h2>
+  <p>В соответствии с GDPR, KVKK и CCPA у тебя есть следующие права:</p>
   <ul>
-    <li><strong>Право доступа:</strong> Узнать, какие данные мы храним о вас</li>
-    <li><strong>Право на исправление:</strong> Запросить исправление неточных данных</li>
-    <li><strong>Право на удаление:</strong> Запросить удаление всех ваших данных («право быть забытым»)</li>
-    <li><strong>Переносимость данных:</strong> Скачать свои данные в машиночитаемом формате</li>
+    <li><strong>Право на доступ:</strong> Узнать, какие данные о тебе мы храним</li>
+    <li><strong>Право на исправление:</strong> Потребовать исправить неточные данные</li>
+    <li><strong>Право на удаление:</strong> Потребовать удалить все твои данные («право на забвение»); это можно сделать и самому в приложении</li>
+    <li><strong>Переносимость данных:</strong> Запросить копию своих данных в машиночитаемом формате</li>
     <li><strong>Право на возражение:</strong> Возразить против обработки данных</li>
-    <li><strong>Право на жалобу:</strong> Подать жалобу в органы защиты данных</li>
+    <li><strong>Право на жалобу:</strong> Подать жалобу в орган по защите данных</li>
   </ul>
-  <p>Чтобы воспользоваться любым из ваших прав, напишите на <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a>. Мы отвечаем на ваш запрос в течение 30 дней.</p>
+  <p>Чтобы воспользоваться своими правами, напиши на <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a>. Мы ответим в течение 30 дней.</p>
 
-  <h2 id="ru-7"><span class="num">07</span>Конфиденциальность детей</h2>
-  <p>ProgFit <strong>не предназначен для детей младше 13 лет</strong>. Мы сознательно не собираем данные о детях младше 13 лет. Если мы узнаем, что ребёнок предоставил нам информацию, мы немедленно удалим эти данные.</p>
+  <h2 id="ru-8"><span class="num">08</span>Конфиденциальность детей</h2>
+  <p>ProgFit <strong>не предназначен для детей младше 13 лет</strong>. Мы сознательно не собираем данные детей младше 13 лет. Если мы узнаем, что ребёнок передал нам данные, мы немедленно их удалим.</p>
 
-  <h2 id="ru-8"><span class="num">08</span>Безопасность данных</h2>
-  <p>Для защиты ваших данных мы используем меры безопасности отраслевого стандарта:</p>
+  <h2 id="ru-9"><span class="num">09</span>Безопасность данных</h2>
+  <p>Для защиты твоих данных мы используем стандартные отраслевые меры безопасности:</p>
   <ul>
     <li>Все данные передаются в зашифрованном виде по HTTPS/TLS</li>
-    <li>Доступ к базе данных предоставляется только авторизованным системам</li>
-    <li>Пароли хешируются с помощью bcrypt (никогда не хранятся в виде открытого текста)</li>
-    <li>Применяются регулярные обновления безопасности</li>
+    <li>Каждый пользователь имеет доступ только к своим данным (защита на уровне строк)</li>
+    <li>Фото прогресса хранятся в закрытом хранилище и открываются только по временным подписанным ссылкам</li>
+    <li>Пароли надёжно хешируются и никогда не хранятся в открытом виде</li>
+    <li>Регулярно устанавливаются обновления безопасности</li>
   </ul>
-  <p>Ни одна система не является на 100% безопасной, но мы делаем всё возможное для защиты ваших данных.</p>
+  <p>Ни одна система не защищена на 100%, но мы делаем всё возможное, чтобы защитить твои данные.</p>
 
-  <h2 id="ru-9"><span class="num">09</span>Изменения политики</h2>
-  <p>Эта Политика конфиденциальности может время от времени обновляться. При значительных изменениях мы отправим уведомления в приложении или сообщим на ваш зарегистрированный адрес электронной почты. Дата вступления политики в силу указана сверху.</p>
+  <h2 id="ru-10"><span class="num">10</span>Изменения политики</h2>
+  <p>Эта Политика конфиденциальности может время от времени обновляться. О существенных изменениях мы сообщим в приложении или по email, указанному при регистрации. Дата вступления в силу указана в начале страницы.</p>
 
-  <h2 id="ru-10"><span class="num">10</span>Контакты</h2>
-  <p>По любым вопросам или запросам о нашей политике конфиденциальности вы можете связаться с нами:</p>
+  <h2 id="ru-11"><span class="num">11</span>Контакты</h2>
+  <p>С вопросами и запросами о политике конфиденциальности обращайся:</p>
   <p><strong>Email:</strong> <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a><br>
-  <strong>Веб:</strong> <a href="https://progfit.fit">progfit.fit</a></p>
+  <strong>Сайт:</strong> <a href="https://progfit.fit">progfit.fit</a></p>
 </main>
 </div>
 
@@ -725,8 +855,8 @@
     <h1>Wir respektieren deine Privatsphäre.</h1>
     <p class="lede">Eine klare Erklärung, welche Daten wir erheben, wenn du ProgFit nutzt, warum wir sie erheben und wie wir sie schützen.</p>
     <div class="meta">
-      <div><strong>Gültig ab:</strong> 3. Mai 2026</div>
-      <div><strong>Version:</strong> 1.0</div>
+      <div><strong>Gültig ab:</strong> 10. Oktober 2026</div>
+      <div><strong>Version:</strong> 2.0</div>
     </div>
   </div>
 
@@ -736,18 +866,19 @@
       <li><a href="#de-1">Überblick</a></li>
       <li><a href="#de-2">Welche Daten wir erheben</a></li>
       <li><a href="#de-3">Wie wir Daten verwenden</a></li>
-      <li><a href="#de-4">Dienste von Drittanbietern</a></li>
-      <li><a href="#de-5">Speicherdauer</a></li>
-      <li><a href="#de-6">Deine Rechte</a></li>
-      <li><a href="#de-7">Datenschutz von Kindern</a></li>
-      <li><a href="#de-8">Datensicherheit</a></li>
-      <li><a href="#de-9">Änderungen dieser Erklärung</a></li>
-      <li><a href="#de-10">Kontakt</a></li>
+      <li><a href="#de-4">KI-Coach (Proggy)</a></li>
+      <li><a href="#de-5">Dienste von Drittanbietern</a></li>
+      <li><a href="#de-6">Speicherung und Löschung</a></li>
+      <li><a href="#de-7">Deine Rechte</a></li>
+      <li><a href="#de-8">Datenschutz von Kindern</a></li>
+      <li><a href="#de-9">Datensicherheit</a></li>
+      <li><a href="#de-10">Änderungen dieser Erklärung</a></li>
+      <li><a href="#de-11">Kontakt</a></li>
     </ol>
   </div>
 
   <h2 id="de-1"><span class="num">01</span>Überblick</h2>
-  <p>ProgFit („wir“, „die App“, „der Dienst“) ist eine mobile Anwendung, die ihren Nutzern Fitness-Tracking, Trainingsprogramme, Ernährungs-Tracking und die Berechnung von Körpermaßen bietet. Diese Datenschutzerklärung erläutert, welche personenbezogenen Daten wir bei der Nutzung von ProgFit erheben, wie wir diese Daten verarbeiten und welche Rechte du hast.</p>
+  <p>ProgFit („wir“, „die App“, „der Dienst“) ist eine mobile App (iOS und Android) mit Trainingsprogrammen, Fortschritts- und Ernährungs-Tracking, Berechnung von Körperwerten und einem KI-Coach. Diese Datenschutzerklärung erläutert, welche personenbezogenen Daten wir bei der Nutzung von ProgFit erheben, wie wir sie verarbeiten und welche Rechte du hast.</p>
   <p>Diese Erklärung entspricht internationalen Datenschutzvorschriften, darunter die <strong>DSGVO</strong> (Datenschutz-Grundverordnung der EU), das <strong>KVKK</strong> (türkisches Gesetz zum Schutz personenbezogener Daten) und der <strong>CCPA</strong> (California Consumer Privacy Act).</p>
   <div class="callout">
     <p><strong>Verantwortlicher:</strong> ProgFit wird von einem einzelnen App-Entwickler betrieben. Kontakt: <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a></p>
@@ -757,96 +888,137 @@
 
   <h3>Kontoinformationen</h3>
   <ul>
-    <li>E-Mail-Adresse (über „Mit Apple anmelden“ oder Registrierung per E-Mail)</li>
-    <li>Name/Benutzername (optional, um dein Profil zu vervollständigen)</li>
+    <li>Bei Registrierung per E-Mail: deine E-Mail-Adresse und dein Passwort (das Passwort wird nur als sicherer Hash gespeichert)</li>
+    <li>Bei Anmeldung mit Apple oder Google: die E-Mail-Adresse (bzw. Apples private Weiterleitungsadresse) und eine Konto-ID dieses Anbieters</li>
+    <li>Dein Name (optional)</li>
   </ul>
 
-  <h3>Profil- und Gesundheitsdaten</h3>
+  <h3>Profil-, Trainings- und Ernährungsdaten</h3>
   <ul>
-    <li>Geschlecht, Alter, Größe und Gewicht</li>
-    <li>Körpermaße (Taillen-, Hals- und Hüftumfang)</li>
-    <li>Berechnete Werte (Körperfettanteil, Muskelmasse, Fettmasse)</li>
-    <li>Trainingsverlauf und wöchentliche Gewichtssteigerungen</li>
-    <li>Ernährungsdaten (tägliche Kalorien- und Makronährstoffaufnahme)</li>
-    <li>Zielgewicht und Trainingspräferenzen</li>
+    <li>Geschlecht, Alter, Größe, Gewicht, Ziel und Trainingstage pro Woche</li>
+    <li>Körpermaße (Hals, Taille, Hüfte) und berechnete Werte (Körperfettanteil, Muskelmasse)</li>
+    <li>Dein Trainingsprogramm; die Gewichte, Wiederholungen und Sätze, die du einträgst; abgeschlossene Trainings (Dauer, Gesamtvolumen, persönliche Rekorde) und deine Notizen</li>
+    <li>Deine Gewichtseinträge</li>
+    <li>Lebensmittel, Mahlzeiten, Favoriten und Wasser, die du einträgst</li>
+  </ul>
+
+  <h3>Fortschrittsfotos</h3>
+  <ul>
+    <li>Fotos, die du selbst über die Kamera oder aus deiner Mediathek hinzufügst. Sie werden in einem privaten Speicher abgelegt, auf den nur dein Konto zugreifen kann, nicht an Dritte weitergegeben und nie an den KI-Coach gesendet.</li>
+  </ul>
+
+  <h3>Apple Health (optional, nur iOS)</h3>
+  <ul>
+    <li>Wenn du diese Funktion aktivierst, liest ProgFit dein aktuellstes Körpergewicht aus Apple Health und speichert deine abgeschlossenen Krafttrainings sowie das in der App eingetragene Gewicht in Apple Health.</li>
+    <li>Daten aus Apple Health werden nur für die Fitnessfunktionen von ProgFit verwendet. Sie werden nie für Werbung genutzt, nie verkauft und nie an Datenhändler weitergegeben.</li>
+  </ul>
+
+  <h3>Proggy (KI-Coach)</h3>
+  <ul>
+    <li>Fragen, die du Proggy stellst, und seine Antworten (Details in Abschnitt 04)</li>
+  </ul>
+
+  <h3>Nachrichten und Anfragen</h3>
+  <ul>
+    <li>Anfragen für Coaching-Berichte (die Maße und Präferenzen, die du im Formular angibst)</li>
+    <li>Feedback- und Supportnachrichten an uns</li>
+    <li>E-Mail-Adressen von Freunden, die du einlädst (nur zum Versenden der Einladung)</li>
   </ul>
 
   <h3>Abonnement- und Kaufinformationen</h3>
   <ul>
-    <li>Abonnementstatus (Pro / Free)</li>
-    <li>Kaufdaten und Abonnementtyp (über RevenueCat)</li>
-    <li><strong>Zahlungsinformationen werden von ProgFit <em>niemals gespeichert</em></strong> – alle Zahlungen werden direkt über den Apple App Store abgewickelt</li>
+    <li>Abonnementstatus und -typ, Kauf- und Verlängerungsdaten (über RevenueCat)</li>
+    <li><strong>Zahlungsdaten werden von ProgFit <em>nie eingesehen oder gespeichert</em></strong>; Zahlungen werden vom Apple App Store oder von Google Play abgewickelt</li>
+    <li>Unter iOS Attributionsdaten von Apple Search Ads, damit wir sehen, welche Werbekampagnen zu Installationen und Abos führen (ohne persönliche Kennung)</li>
   </ul>
 
-  <h3>Technische Daten</h3>
+  <h3>Technische und Nutzungsdaten</h3>
   <ul>
-    <li>Gerätetyp (iOS-Version)</li>
-    <li>App-Version</li>
-    <li>Anonyme Nutzungsstatistiken (welche Funktionen genutzt werden)</li>
+    <li>Geräteplattform (iOS/Android), App-Version und Update-ID</li>
+    <li>Nutzungsereignisse in der App (z. B. welche Bildschirme und Funktionen genutzt werden) und Fehlerberichte; sie sind mit deinem Konto verknüpft, damit wir Probleme beheben können</li>
+    <li>Wir verwenden keine Werbe-ID (IDFA) und verfolgen dich nicht über Apps oder Websites anderer Unternehmen hinweg.</li>
   </ul>
 
   <h2 id="de-3"><span class="num">03</span>Wie wir Daten verwenden</h2>
   <p>Wir verwenden die erhobenen Daten ausschließlich für folgende Zwecke:</p>
   <ul>
-    <li><strong>Bereitstellung des Dienstes:</strong> Trainingsprogramme erstellen, Körpermaße berechnen, deinen Fortschritt verfolgen</li>
-    <li><strong>Personalisierung:</strong> Individuelle Trainings- und Ernährungsempfehlungen geben</li>
-    <li><strong>Abonnementverwaltung:</strong> Deine Pro-Mitgliedschaft prüfen und den Zugang zu Funktionen ermöglichen</li>
-    <li><strong>Kommunikation:</strong> Für wichtige Updates und Supportanfragen (nur wenn nötig)</li>
-    <li><strong>Verbesserung:</strong> Die App mithilfe anonymer Nutzungsdaten verbessern</li>
+    <li><strong>Bereitstellung des Dienstes:</strong> Dein Programm erstellen, Körperwerte und Kalorienziel berechnen, deinen Fortschritt verfolgen und deine Einträge speichern</li>
+    <li><strong>Personalisierung:</strong> Empfehlungen, dein adaptives Kalorienziel und Proggys Antworten auf dich zuschneiden</li>
+    <li><strong>Abonnementverwaltung:</strong> Deine Pro-Mitgliedschaft prüfen und Zugang zu Funktionen gewähren</li>
+    <li><strong>Kommunikation:</strong> Deinen Coaching-Bericht per E-Mail senden, deine Einladungen zustellen und auf dein Feedback antworten</li>
+    <li><strong>Erinnerungen:</strong> Trainingserinnerungen und tägliche Tipps werden als lokale Benachrichtigungen auf deinem Gerät geplant; du kannst sie in den Einstellungen ausschalten</li>
+    <li><strong>Verbesserung und Zuverlässigkeit:</strong> Die App mithilfe von Nutzungsereignissen und Fehlerberichten verbessern und Fehler beheben</li>
   </ul>
-  <p><strong>Wir verkaufen deine Daten niemals an Dritte und verwenden sie nicht für Marketingzwecke.</strong></p>
+  <p><strong>Wir verkaufen deine Daten niemals und verwenden sie nicht für Werbung.</strong></p>
 
-  <h2 id="de-4"><span class="num">04</span>Dienste von Drittanbietern</h2>
-  <p>ProgFit nutzt die folgenden vertrauenswürdigen Dienstleister:</p>
+  <h2 id="de-4"><span class="num">04</span>KI-Coach (Proggy)</h2>
+  <p>Proggy basiert auf der Gemini API von Google. Wenn du Proggy eine Nachricht sendest, übermittelt unser Server an Google:</p>
+  <ul>
+    <li>Deine Nachricht und die vorherigen Nachrichten in derselben Unterhaltung</li>
+    <li>Eine Zusammenfassung deiner ProgFit-Daten, damit die Antworten persönlich sind: Geschlecht, Alter, Größe, Gewicht, Ziel und Trainingstage; deine letzte Körperfettmessung; Gewichtseinträge der letzten 90 Tage (einschließlich aus Apple Health übernommener Werte); Trainings der letzten 5 Wochen, dein Programm und deine eingetragenen Gewichte; tägliche Kalorien- und Proteinsummen der letzten 14 Tage</li>
+  </ul>
+  <p>Dein Name, deine E-Mail-Adresse und deine Fortschrittsfotos werden nie übermittelt. Wir speichern deine Unterhaltungen nicht auf unseren Servern; wir zählen nur, wie viele Fragen du pro Tag stellst, für das Limit deines Plans. Google verarbeitet diese Daten gemäß den Gemini-API-Bedingungen, um die Antwort zu erzeugen. Proggy wird nur aktiv, wenn du ihm schreibst.</p>
+  <div class="callout callout-warning">
+    <p><strong>Hinweis:</strong> Proggys Antworten werden von einer KI erzeugt und können ungenau sein. Sie sind keine medizinische Beratung.</p>
+  </div>
+
+  <h2 id="de-5"><span class="num">05</span>Dienste von Drittanbietern</h2>
+  <p>ProgFit nutzt die folgenden Dienstleister:</p>
   <table>
     <thead>
       <tr><th>Dienst</th><th>Zweck</th><th>Datenart</th></tr>
     </thead>
     <tbody>
-      <tr><td>Supabase</td><td>Datenbank und Authentifizierung</td><td>Alle Nutzerdaten</td></tr>
-      <tr><td>RevenueCat</td><td>Abonnementverwaltung</td><td>Abonnementstatus, Kaufhistorie</td></tr>
-      <tr><td>Apple App Store</td><td>Zahlungsabwicklung</td><td>Zahlungsdaten (werden nicht mit uns geteilt)</td></tr>
+      <tr><td>Supabase</td><td>Datenbank, Anmeldung und privater Fotospeicher</td><td>Alle Konto- und App-Daten</td></tr>
+      <tr><td>RevenueCat</td><td>Abonnementverwaltung</td><td>Konto-ID, E-Mail, Abo- und Kaufhistorie</td></tr>
+      <tr><td>Apple</td><td>App-Store-Zahlungen, Mit Apple anmelden, Apple Health, Search-Ads-Attribution</td><td>Zahlungsdaten (nicht mit uns geteilt), Anmelde-ID, von dir freigegebene Gesundheitsdaten</td></tr>
+      <tr><td>Google</td><td>Google-Play-Zahlungen, Google-Anmeldung, Gemini API (Proggy)</td><td>Zahlungsdaten (nicht mit uns geteilt), Anmelde-ID, an Proggy gesendete Daten (Abschnitt 04)</td></tr>
+      <tr><td>Open Food Facts</td><td>Lebensmittelsuche per Barcode</td><td>Nur die gescannte Barcode-Nummer</td></tr>
+      <tr><td>Resend</td><td>E-Mail-Versand</td><td>Deine E-Mail-Adresse und der Inhalt der E-Mail (Berichte, Einladungen, Antworten auf Feedback)</td></tr>
+      <tr><td>Expo</td><td>Auslieferung von App-Updates</td><td>Gerätetyp und App-Version</td></tr>
     </tbody>
   </table>
-  <p>Jeder dieser Dienste hat eine eigene Datenschutzerklärung und verarbeitet deine Daten nur, um dir seine Leistungen bereitzustellen.</p>
+  <p>Jeder dieser Dienste verarbeitet Daten nur, um uns seine Leistung zu erbringen, und hat eine eigene Datenschutzerklärung.</p>
 
-  <h2 id="de-5"><span class="num">05</span>Speicherdauer</h2>
-  <p>Wir speichern deine Daten nur so lange, wie es für die Bereitstellung unserer Dienste erforderlich ist:</p>
+  <h2 id="de-6"><span class="num">06</span>Speicherung und Löschung</h2>
+  <p>Wir speichern deine Daten nur so lange, wie es für den Dienst nötig ist:</p>
   <ul>
-    <li><strong>Aktives Konto:</strong> Solange dein Konto aktiv ist</li>
-    <li><strong>Antrag auf Kontolöschung:</strong> Alle deine Daten werden innerhalb von 30 Tagen gelöscht</li>
-    <li><strong>Backups:</strong> Werden nach 90 Tagen automatisch gelöscht, sofern keine gesetzliche Aufbewahrungspflicht besteht</li>
+    <li><strong>Aktives Konto:</strong> Solange dein Konto besteht</li>
+    <li><strong>Kontolöschung:</strong> Du kannst dein Konto jederzeit in der App löschen (Einstellungen → Konto löschen). Dein Konto, alle deine Daten und Fortschrittsfotos werden sofort aus unserer Datenbank gelöscht. Kopien in verschlüsselten Backups werden innerhalb von 30 Tagen entfernt.</li>
+    <li><strong>Abonnements:</strong> Das Löschen deines Kontos kündigt kein Abo im App Store oder bei Google Play; kündige es in den Einstellungen deines Stores.</li>
+    <li><strong>E-Mails:</strong> Feedback, das du uns sendest, wird nur so lange aufbewahrt, wie es für unsere Antwort nötig ist.</li>
   </ul>
 
-  <h2 id="de-6"><span class="num">06</span>Deine Rechte</h2>
+  <h2 id="de-7"><span class="num">07</span>Deine Rechte</h2>
   <p>Nach DSGVO, KVKK und CCPA hast du folgende Rechte:</p>
   <ul>
     <li><strong>Auskunftsrecht:</strong> Erfahren, welche Daten wir über dich speichern</li>
     <li><strong>Recht auf Berichtigung:</strong> Die Korrektur unrichtiger Daten verlangen</li>
-    <li><strong>Recht auf Löschung:</strong> Die Löschung aller deiner Daten verlangen („Recht auf Vergessenwerden“)</li>
-    <li><strong>Datenübertragbarkeit:</strong> Deine Daten in einem maschinenlesbaren Format herunterladen</li>
+    <li><strong>Recht auf Löschung:</strong> Die Löschung aller deiner Daten verlangen („Recht auf Vergessenwerden“); das kannst du auch selbst in der App tun</li>
+    <li><strong>Datenübertragbarkeit:</strong> Eine maschinenlesbare Kopie deiner Daten anfordern</li>
     <li><strong>Widerspruchsrecht:</strong> Der Datenverarbeitung widersprechen</li>
     <li><strong>Beschwerderecht:</strong> Beschwerde bei einer Datenschutzbehörde einlegen</li>
   </ul>
-  <p>Um eines deiner Rechte auszuüben, schreib uns an <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a>. Wir beantworten deine Anfrage innerhalb von 30 Tagen.</p>
+  <p>Um deine Rechte auszuüben, schreib an <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a>. Wir antworten innerhalb von 30 Tagen.</p>
 
-  <h2 id="de-7"><span class="num">07</span>Datenschutz von Kindern</h2>
-  <p>ProgFit ist <strong>nicht für Kinder unter 13 Jahren bestimmt</strong>. Wir erheben wissentlich keine Daten von Kindern unter 13 Jahren. Sollten wir feststellen, dass uns ein Kind Daten übermittelt hat, löschen wir diese umgehend.</p>
+  <h2 id="de-8"><span class="num">08</span>Datenschutz von Kindern</h2>
+  <p>ProgFit ist <strong>nicht für Kinder unter 13 Jahren bestimmt</strong>. Wir erheben wissentlich keine Daten von Kindern unter 13 Jahren. Wenn wir erfahren, dass uns ein Kind Daten übermittelt hat, löschen wir sie umgehend.</p>
 
-  <h2 id="de-8"><span class="num">08</span>Datensicherheit</h2>
+  <h2 id="de-9"><span class="num">09</span>Datensicherheit</h2>
   <p>Wir setzen branchenübliche Sicherheitsmaßnahmen ein, um deine Daten zu schützen:</p>
   <ul>
     <li>Alle Daten werden verschlüsselt über HTTPS/TLS übertragen</li>
-    <li>Zugriff auf die Datenbank haben nur autorisierte Systeme</li>
-    <li>Passwörter werden mit bcrypt gehasht (niemals im Klartext gespeichert)</li>
+    <li>Jeder Nutzer kann nur auf seine eigenen Daten zugreifen (Sicherheit auf Zeilenebene)</li>
+    <li>Fortschrittsfotos liegen in einem privaten Speicher und werden nur über kurzlebige signierte Links angezeigt</li>
+    <li>Passwörter werden sicher gehasht und nie im Klartext gespeichert</li>
     <li>Regelmäßige Sicherheitsupdates werden eingespielt</li>
   </ul>
   <p>Kein System ist zu 100 % sicher, aber wir tun alles, was wir können, um deine Daten zu schützen.</p>
 
-  <h2 id="de-9"><span class="num">09</span>Änderungen dieser Erklärung</h2>
+  <h2 id="de-10"><span class="num">10</span>Änderungen dieser Erklärung</h2>
   <p>Diese Datenschutzerklärung kann von Zeit zu Zeit aktualisiert werden. Bei wesentlichen Änderungen informieren wir dich in der App oder per E-Mail an deine registrierte Adresse. Das Gültigkeitsdatum steht oben auf dieser Seite.</p>
 
-  <h2 id="de-10"><span class="num">10</span>Kontakt</h2>
+  <h2 id="de-11"><span class="num">11</span>Kontakt</h2>
   <p>Bei Fragen oder Anliegen zu unserer Datenschutzerklärung erreichst du uns unter:</p>
   <p><strong>E-Mail:</strong> <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a><br>
   <strong>Web:</strong> <a href="https://progfit.fit">progfit.fit</a></p>
@@ -863,8 +1035,8 @@
     <h1>Respetamos tu privacidad.</h1>
     <p class="lede">Una explicación clara de qué datos recopilamos cuando usas ProgFit, por qué los recopilamos y cómo los protegemos.</p>
     <div class="meta">
-      <div><strong>Fecha de entrada en vigor:</strong> 3 de mayo de 2026</div>
-      <div><strong>Versión:</strong> 1.0</div>
+      <div><strong>Fecha de entrada en vigor:</strong> 10 de octubre de 2026</div>
+      <div><strong>Versión:</strong> 2.0</div>
     </div>
   </div>
 
@@ -874,18 +1046,19 @@
       <li><a href="#es-1">Resumen</a></li>
       <li><a href="#es-2">Datos que recopilamos</a></li>
       <li><a href="#es-3">Cómo usamos los datos</a></li>
-      <li><a href="#es-4">Servicios de terceros</a></li>
-      <li><a href="#es-5">Conservación de datos</a></li>
-      <li><a href="#es-6">Tus derechos</a></li>
-      <li><a href="#es-7">Privacidad de los menores</a></li>
-      <li><a href="#es-8">Seguridad de los datos</a></li>
-      <li><a href="#es-9">Cambios en la política</a></li>
-      <li><a href="#es-10">Contacto</a></li>
+      <li><a href="#es-4">Coach con IA (Proggy)</a></li>
+      <li><a href="#es-5">Servicios de terceros</a></li>
+      <li><a href="#es-6">Conservación y eliminación</a></li>
+      <li><a href="#es-7">Tus derechos</a></li>
+      <li><a href="#es-8">Privacidad de los menores</a></li>
+      <li><a href="#es-9">Seguridad de los datos</a></li>
+      <li><a href="#es-10">Cambios en la política</a></li>
+      <li><a href="#es-11">Contacto</a></li>
     </ol>
   </div>
 
   <h2 id="es-1"><span class="num">01</span>Resumen</h2>
-  <p>ProgFit («nosotros», «la app», «el servicio») es una aplicación móvil que ofrece a sus usuarios seguimiento de actividad física, programas de entrenamiento, seguimiento de la alimentación y cálculo de medidas corporales. Esta Política de Privacidad explica qué datos personales recopilamos cuando usas ProgFit, cómo los tratamos y cuáles son tus derechos.</p>
+  <p>ProgFit («nosotros», «la app», «el servicio») es una aplicación móvil (iOS y Android) que ofrece programas de entrenamiento, seguimiento del progreso y de la alimentación, cálculo de medidas corporales y un coach con inteligencia artificial. Esta Política de Privacidad explica qué datos personales recopilamos cuando usas ProgFit, cómo los tratamos y cuáles son tus derechos.</p>
   <p>Esta política cumple con normativas internacionales de privacidad, entre ellas el <strong>RGPD</strong> (Reglamento General de Protección de Datos de la UE), la <strong>KVKK</strong> (Ley de Protección de Datos Personales de Turquía) y la <strong>CCPA</strong> (Ley de Privacidad del Consumidor de California).</p>
   <div class="callout">
     <p><strong>Responsable del tratamiento:</strong> ProgFit está gestionada por un desarrollador independiente. Contacto: <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a></p>
@@ -895,97 +1068,138 @@
 
   <h3>Información de la cuenta</h3>
   <ul>
-    <li>Dirección de correo electrónico (mediante Iniciar sesión con Apple o registro por correo)</li>
-    <li>Nombre/nombre de usuario (opcional, para completar tu perfil)</li>
+    <li>Si te registras con correo: tu dirección de correo y tu contraseña (la contraseña solo se guarda como un hash seguro)</li>
+    <li>Si inicias sesión con Apple o Google: el correo (o la dirección privada de reenvío de Apple) y un identificador de cuenta de ese proveedor</li>
+    <li>Tu nombre (opcional)</li>
   </ul>
 
-  <h3>Datos de perfil y de salud</h3>
+  <h3>Datos de perfil, entrenamiento y alimentación</h3>
   <ul>
-    <li>Sexo, edad, altura y peso</li>
-    <li>Medidas corporales (contorno de cintura, cuello y cadera)</li>
-    <li>Valores calculados (porcentaje de grasa corporal, masa muscular, masa grasa)</li>
-    <li>Historial de entrenamientos y progresión semanal de pesos</li>
-    <li>Datos de alimentación (ingesta diaria de calorías y macronutrientes)</li>
-    <li>Peso objetivo y preferencias de entrenamiento</li>
+    <li>Sexo, edad, altura, peso, objetivo y días de entrenamiento por semana</li>
+    <li>Medidas corporales (cuello, cintura, cadera) y valores calculados (porcentaje de grasa corporal, masa muscular)</li>
+    <li>Tu programa de entrenamiento; los pesos, repeticiones y series que registras; los entrenamientos completados (duración, volumen total, récords personales) y tus notas</li>
+    <li>Tus registros de peso</li>
+    <li>Los alimentos, comidas, favoritos y agua que registras</li>
+  </ul>
+
+  <h3>Fotos de progreso</h3>
+  <ul>
+    <li>Las fotos que decides añadir desde la cámara o tu fototeca. Se guardan en un almacenamiento privado al que solo tu cuenta puede acceder, no se comparten con terceros y nunca se envían al coach con IA.</li>
+  </ul>
+
+  <h3>Apple Salud (opcional, solo iOS)</h3>
+  <ul>
+    <li>Si activas esta función, ProgFit lee tu peso corporal más reciente de Apple Salud y guarda en Apple Salud tus entrenamientos de fuerza completados y el peso que registras en la app.</li>
+    <li>Los datos de Apple Salud solo se usan para ofrecer las funciones de fitness de ProgFit. Nunca se usan para publicidad, nunca se venden y nunca se comparten con intermediarios de datos.</li>
+  </ul>
+
+  <h3>Proggy (coach con IA)</h3>
+  <ul>
+    <li>Las preguntas que envías a Proggy y sus respuestas (detalles en la sección 04)</li>
+  </ul>
+
+  <h3>Mensajes y solicitudes</h3>
+  <ul>
+    <li>Solicitudes de informes de coaching (las medidas y preferencias que introduces en el formulario)</li>
+    <li>Los comentarios y mensajes de soporte que nos envías</li>
+    <li>Las direcciones de correo de los amigos que invitas (solo se usan para enviar la invitación)</li>
   </ul>
 
   <h3>Información de suscripción y compras</h3>
   <ul>
-    <li>Estado de la suscripción (Pro / Free)</li>
-    <li>Fechas de compra y tipo de suscripción (a través de RevenueCat)</li>
-    <li><strong>ProgFit <em>nunca almacena</em> datos de pago</strong>: todos los pagos se procesan directamente a través del Apple App Store</li>
+    <li>Estado y tipo de suscripción, fechas de compra y renovación (a través de RevenueCat)</li>
+    <li><strong>ProgFit <em>nunca ve ni almacena</em> tus datos de pago</strong>: los pagos los procesan el Apple App Store o Google Play</li>
+    <li>En iOS, datos de atribución de Apple Search Ads para saber qué campañas publicitarias generan instalaciones y suscripciones (sin identificadores personales)</li>
   </ul>
 
-  <h3>Datos técnicos</h3>
+  <h3>Datos técnicos y de uso</h3>
   <ul>
-    <li>Tipo de dispositivo (versión de iOS)</li>
-    <li>Versión de la app</li>
-    <li>Estadísticas de uso anónimas (qué funciones se usan)</li>
+    <li>Plataforma del dispositivo (iOS/Android), versión de la app e identificador de actualización</li>
+    <li>Eventos de uso dentro de la app (por ejemplo, qué pantallas y funciones se usan) e informes de errores, vinculados a tu cuenta para poder solucionar problemas</li>
+    <li>No usamos el identificador de publicidad (IDFA) ni te rastreamos en apps o sitios web de otras empresas.</li>
   </ul>
 
   <h2 id="es-3"><span class="num">03</span>Cómo usamos los datos</h2>
   <p>Solo usamos los datos que recopilamos para los siguientes fines:</p>
   <ul>
-    <li><strong>Prestación del servicio:</strong> crear programas de entrenamiento, calcular medidas corporales y seguir tu progreso</li>
-    <li><strong>Personalización:</strong> ofrecerte recomendaciones de entrenamiento y alimentación a tu medida</li>
-    <li><strong>Gestión de la suscripción:</strong> verificar tu membresía Pro y darte acceso a las funciones</li>
-    <li><strong>Comunicación:</strong> para actualizaciones importantes y solicitudes de soporte (solo cuando sea necesario)</li>
-    <li><strong>Mejora:</strong> mejorar la app con datos de uso anónimos</li>
+    <li><strong>Prestación del servicio:</strong> Crear tu programa, calcular tus medidas y tu objetivo de calorías, seguir tu progreso y guardar tus registros</li>
+    <li><strong>Personalización:</strong> Adaptar a ti las recomendaciones, tu objetivo de calorías adaptativo y las respuestas de Proggy</li>
+    <li><strong>Gestión de la suscripción:</strong> Verificar tu membresía Pro y darte acceso a las funciones</li>
+    <li><strong>Comunicación:</strong> Enviarte por correo tu informe de coaching, entregar las invitaciones que envías y responder a tus comentarios</li>
+    <li><strong>Recordatorios:</strong> Los recordatorios de entrenamiento y los consejos diarios se programan en tu dispositivo como notificaciones locales; puedes desactivarlos en Ajustes</li>
+    <li><strong>Mejora y fiabilidad:</strong> Mejorar la app y corregir errores con los eventos de uso y los informes de errores</li>
   </ul>
-  <p><strong>Nunca vendemos tus datos a terceros ni los usamos con fines de marketing.</strong></p>
+  <p><strong>Nunca vendemos tus datos ni los usamos para publicidad.</strong></p>
 
-  <h2 id="es-4"><span class="num">04</span>Servicios de terceros</h2>
-  <p>ProgFit utiliza los siguientes proveedores de servicios de confianza:</p>
+  <h2 id="es-4"><span class="num">04</span>Coach con IA (Proggy)</h2>
+  <p>Proggy funciona con la API de Gemini de Google. Cuando envías un mensaje a Proggy, nuestro servidor envía a Google:</p>
+  <ul>
+    <li>Tu mensaje y los mensajes anteriores de la misma conversación</li>
+    <li>Un resumen de tus datos de ProgFit para que las respuestas sean personales: sexo, edad, altura, peso, objetivo y días de entrenamiento; tu última medición de grasa corporal; los registros de peso de los últimos 90 días (incluido el peso importado de Apple Salud); los entrenamientos de las últimas 5 semanas, tu programa y los pesos registrados; los totales diarios de calorías y proteínas de los últimos 14 días</li>
+  </ul>
+  <p>Tu nombre, tu correo y tus fotos de progreso nunca se envían. No guardamos tus conversaciones en nuestros servidores; solo contamos cuántas preguntas haces al día para el límite de tu plan. Google trata estos datos para generar la respuesta según las condiciones de la API de Gemini. Proggy solo se activa cuando decides escribirle.</p>
+  <div class="callout callout-warning">
+    <p><strong>Nota:</strong> las respuestas de Proggy las genera una IA y pueden ser inexactas. No son consejo médico.</p>
+  </div>
+
+  <h2 id="es-5"><span class="num">05</span>Servicios de terceros</h2>
+  <p>ProgFit utiliza los siguientes proveedores de servicios:</p>
   <table>
     <thead>
       <tr><th>Servicio</th><th>Finalidad</th><th>Tipo de datos</th></tr>
     </thead>
     <tbody>
-      <tr><td>Supabase</td><td>Base de datos y autenticación</td><td>Todos los datos de usuario</td></tr>
-      <tr><td>RevenueCat</td><td>Gestión de suscripciones</td><td>Estado de la suscripción, historial de compras</td></tr>
-      <tr><td>Apple App Store</td><td>Procesamiento de pagos</td><td>Datos de pago (no se comparten con nosotros)</td></tr>
+      <tr><td>Supabase</td><td>Base de datos, inicio de sesión y almacenamiento privado de fotos</td><td>Todos los datos de la cuenta y de la app</td></tr>
+      <tr><td>RevenueCat</td><td>Gestión de suscripciones</td><td>ID de cuenta, correo, historial de suscripciones y compras</td></tr>
+      <tr><td>Apple</td><td>Pagos del App Store, Iniciar sesión con Apple, Apple Salud, atribución de Search Ads</td><td>Datos de pago (no se comparten con nosotros), identificador de inicio de sesión, datos de salud que autorices</td></tr>
+      <tr><td>Google</td><td>Pagos de Google Play, inicio de sesión con Google, API de Gemini (Proggy)</td><td>Datos de pago (no se comparten con nosotros), identificador de inicio de sesión, datos enviados a Proggy (sección 04)</td></tr>
+      <tr><td>Open Food Facts</td><td>Búsqueda de alimentos por código de barras</td><td>Solo el número del código escaneado</td></tr>
+      <tr><td>Resend</td><td>Envío de correos</td><td>Tu correo y el contenido del mensaje (informes, invitaciones, respuestas a comentarios)</td></tr>
+      <tr><td>Expo</td><td>Distribución de actualizaciones de la app</td><td>Tipo de dispositivo y versión de la app</td></tr>
     </tbody>
   </table>
-  <p>Cada uno de estos servicios tiene su propia política de privacidad y trata tus datos únicamente para prestarte sus servicios.</p>
+  <p>Cada uno de estos servicios trata los datos solo para prestarnos su servicio y tiene su propia política de privacidad.</p>
 
-  <h2 id="es-5"><span class="num">05</span>Conservación de datos</h2>
-  <p>Conservamos tus datos solo durante el tiempo necesario para prestar nuestros servicios:</p>
+  <h2 id="es-6"><span class="num">06</span>Conservación y eliminación</h2>
+  <p>Conservamos tus datos solo el tiempo necesario para prestar el servicio:</p>
   <ul>
-    <li><strong>Cuenta activa:</strong> mientras tu cuenta esté activa</li>
-    <li><strong>Solicitud de eliminación de la cuenta:</strong> todos tus datos se eliminan en un plazo de 30 días</li>
-    <li><strong>Copias de seguridad:</strong> se eliminan automáticamente a los 90 días, salvo obligación legal</li>
+    <li><strong>Cuenta activa:</strong> Mientras exista tu cuenta</li>
+    <li><strong>Eliminación de la cuenta:</strong> Puedes eliminar tu cuenta desde la app en cualquier momento (Ajustes → Eliminar cuenta). Tu cuenta, todos tus datos y tus fotos de progreso se eliminan de nuestra base de datos de inmediato. Las copias en los respaldos cifrados se eliminan en un plazo de 30 días.</li>
+    <li><strong>Suscripciones:</strong> Eliminar tu cuenta no cancela una suscripción del App Store o de Google Play; cancélala en los ajustes de tu tienda.</li>
+    <li><strong>Correos:</strong> Los comentarios que nos envías se conservan solo el tiempo necesario para responderte.</li>
   </ul>
 
-  <h2 id="es-6"><span class="num">06</span>Tus derechos</h2>
+  <h2 id="es-7"><span class="num">07</span>Tus derechos</h2>
   <p>De acuerdo con el RGPD, la KVKK y la CCPA, tienes los siguientes derechos:</p>
   <ul>
-    <li><strong>Derecho de acceso:</strong> saber qué datos tenemos sobre ti</li>
-    <li><strong>Derecho de rectificación:</strong> solicitar la corrección de datos inexactos</li>
-    <li><strong>Derecho de supresión:</strong> solicitar la eliminación de todos tus datos («derecho al olvido»)</li>
-    <li><strong>Portabilidad de los datos:</strong> descargar tus datos en un formato legible por máquina</li>
-    <li><strong>Derecho de oposición:</strong> oponerte al tratamiento de tus datos</li>
-    <li><strong>Derecho a reclamar:</strong> presentar una reclamación ante una autoridad de protección de datos</li>
+    <li><strong>Derecho de acceso:</strong> Saber qué datos tenemos sobre ti</li>
+    <li><strong>Derecho de rectificación:</strong> Solicitar la corrección de datos inexactos</li>
+    <li><strong>Derecho de supresión:</strong> Solicitar la eliminación de todos tus datos («derecho al olvido»); también puedes hacerlo tú mismo desde la app</li>
+    <li><strong>Portabilidad de los datos:</strong> Solicitar una copia de tus datos en un formato legible por máquina</li>
+    <li><strong>Derecho de oposición:</strong> Oponerte al tratamiento de tus datos</li>
+    <li><strong>Derecho a reclamar:</strong> Presentar una reclamación ante una autoridad de protección de datos</li>
   </ul>
-  <p>Para ejercer cualquiera de tus derechos, escríbenos a <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a>. Responderemos a tu solicitud en un plazo de 30 días.</p>
+  <p>Para ejercer tus derechos, escríbenos a <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a>. Respondemos en un plazo de 30 días.</p>
 
-  <h2 id="es-7"><span class="num">07</span>Privacidad de los menores</h2>
-  <p>ProgFit <strong>no está dirigida a menores de 13 años</strong>. No recopilamos de forma consciente datos de menores de 13 años. Si descubrimos que un menor nos ha proporcionado información, eliminaremos esos datos de inmediato.</p>
+  <h2 id="es-8"><span class="num">08</span>Privacidad de los menores</h2>
+  <p>ProgFit <strong>no está dirigida a menores de 13 años</strong>. No recopilamos de forma consciente datos de menores de 13 años. Si descubrimos que un menor nos ha proporcionado datos, los eliminaremos de inmediato.</p>
 
-  <h2 id="es-8"><span class="num">08</span>Seguridad de los datos</h2>
+  <h2 id="es-9"><span class="num">09</span>Seguridad de los datos</h2>
   <p>Utilizamos medidas de seguridad estándar del sector para proteger tus datos:</p>
   <ul>
     <li>Todos los datos se transmiten cifrados mediante HTTPS/TLS</li>
-    <li>Solo los sistemas autorizados tienen acceso a la base de datos</li>
-    <li>Las contraseñas se cifran con bcrypt (nunca se guardan en texto plano)</li>
+    <li>Cada usuario solo puede acceder a sus propios datos (seguridad a nivel de fila)</li>
+    <li>Las fotos de progreso se guardan en un almacenamiento privado y solo se muestran mediante enlaces firmados de corta duración</li>
+    <li>Las contraseñas se cifran con un hash seguro y nunca se guardan en texto plano</li>
     <li>Se aplican actualizaciones de seguridad periódicas</li>
   </ul>
   <p>Ningún sistema es 100 % seguro, pero hacemos todo lo posible para proteger tus datos.</p>
 
-  <h2 id="es-9"><span class="num">09</span>Cambios en la política</h2>
-  <p>Esta Política de Privacidad puede actualizarse de vez en cuando. Si se producen cambios importantes, te avisaremos dentro de la app o por correo electrónico a tu dirección registrada. La fecha de entrada en vigor se indica en la parte superior.</p>
+  <h2 id="es-10"><span class="num">10</span>Cambios en la política</h2>
+  <p>Esta Política de Privacidad puede actualizarse de vez en cuando. Si hay cambios importantes, te avisaremos en la app o por correo a tu dirección registrada. La fecha de entrada en vigor aparece en la parte superior de esta página.</p>
 
-  <h2 id="es-10"><span class="num">10</span>Contacto</h2>
-  <p>Si tienes preguntas o solicitudes sobre nuestra política de privacidad, puedes escribirnos a:</p>
+  <h2 id="es-11"><span class="num">11</span>Contacto</h2>
+  <p>Si tienes preguntas o solicitudes sobre nuestra política de privacidad, escríbenos a:</p>
   <p><strong>Correo electrónico:</strong> <a href="mailto:progfitapp@gmail.com">progfitapp@gmail.com</a><br>
   <strong>Web:</strong> <a href="https://progfit.fit">progfit.fit</a></p>
 </main>
